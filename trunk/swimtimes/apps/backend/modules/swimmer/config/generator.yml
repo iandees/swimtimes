@@ -1,0 +1,11 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Swimmer
+    theme:            default
+    list:
+      title: List of Swimmers
+      layout: tabular
+      display: [=name, year, team]
+      max_per_page: 25
+      filters: [year, team]

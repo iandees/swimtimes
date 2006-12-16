@@ -1,0 +1,44 @@
+propel:
+  sw_swimmer:
+    _attributes: { phpName: Swimmer }
+    id:
+    name: varchar(255)
+    year: int
+    team_id:
+  sw_meet:
+    _attributes: { phpName: Meet }
+    id:
+    name: varchar(255)
+    startdate: timestamp
+    enddate: timestamp
+  sw_time:
+    _attributes: { phpName: Time }
+    id:
+    swimmer_id:
+    meet_id:
+    event_id:
+    time: double
+    place: int
+    lane: int
+  sw_split:
+    _attributes: { phpName: Split }
+    id:
+    time_id:
+    number: int
+    time: double
+  sw_pool:
+    _attributes: { phpName: Pool }
+    id:
+    name: varchar(255)
+    lat: double
+    lng: double
+  sw_team:
+    _attributes: { phpName: Team }
+    id:
+    name: varchar(255)
+    shortname: varchar(16)
+  sw_event:
+    _attributes: { phpName: Event }
+    id:
+    name: varchar(255)
+    distance: int
