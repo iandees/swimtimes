@@ -1,0 +1,2036 @@
+Nov 29 13:15:58 symfony [info] {sfRouting} connect "/"
+Nov 29 13:15:58 symfony [info] {sfRouting} connect "/symfony/:action/*"
+Nov 29 13:15:58 symfony [info] {sfRouting} connect "/:module"
+Nov 29 13:15:58 symfony [info] {sfRouting} connect "/:module/:action/*"
+Nov 29 13:15:58 symfony [info] {sfContext} initialization
+Nov 29 13:15:58 symfony [info] {sfController} initialization
+Nov 29 13:15:58 symfony [info] {sfRouting} match route [homepage] "/"
+Nov 29 13:15:58 symfony [info] {sfRequest} request parameters array (  'module' => 'default',  'action' => 'index',)
+Nov 29 13:15:58 symfony [info] {sfController} dispatch request
+Nov 29 13:15:58 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:15:58 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:15:58 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:15:58 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:15:58 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:15:58 symfony [info] {sfAction} change layout to "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout"
+Nov 29 13:15:58 symfony [info] {sfAction} call "defaultActions->executeIndex()"
+Nov 29 13:15:58 symfony [info] {sfView} initialize view for "default/index"
+Nov 29 13:15:58 symfony [info] {sfView} render "/var/www/swimtimes/config/../data/symfony/modules/default/templates/indexSuccess.php"
+Nov 29 13:15:58 symfony [info] {sfView} decorate content with "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Nov 29 13:15:58 symfony [info] {sfView} render "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Nov 29 13:15:58 symfony [info] {sfFilter} render to client
+Nov 29 13:15:58 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:15:58 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:15:58 symfony [info] {sfResponse} send content (21251 o)
+Nov 29 13:15:58 symfony [info] {sfTimerManager} Configuration 40.45 ms (11)
+Nov 29 13:15:58 symfony [info] {sfTimerManager} Action "default/index" 0.36 ms (1)
+Nov 29 13:15:58 symfony [info] {sfTimerManager} View "Success" for "default/index" 14.37 ms (1)
+Nov 29 13:16:04 symfony [info] {sfContext} initialization
+Nov 29 13:16:04 symfony [info] {sfController} initialization
+Nov 29 13:16:04 symfony [info] {sfRouting} match route [default_index] "/:module"
+Nov 29 13:16:04 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'index',)
+Nov 29 13:16:04 symfony [info] {sfController} dispatch request
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:16:04 symfony [info] {sfAction} call "swimmerActions->executeIndex()"
+Nov 29 13:16:04 symfony [info] {sfAction} forward to action "swimmer/list"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:16:04 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:16:04 symfony [info] {sfAction} call "swimmerActions->executeList()"
+Nov 29 13:16:04 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:16:04 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:16:04 symfony [info] {sfCreole} executeQuery(): [2.74 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:16:04 symfony [info] {sfView} initialize view for "swimmer/list"
+Nov 29 13:16:04 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/listSuccess.php"
+Nov 29 13:16:04 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:16:04 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:16:05 symfony [info] {sfFilter} render to client
+Nov 29 13:16:05 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:16:05 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:16:05 symfony [info] {sfResponse} send content (22465 o)
+Nov 29 13:16:05 symfony [info] {sfTimerManager} Configuration 35.96 ms (17)
+Nov 29 13:16:05 symfony [info] {sfTimerManager} Action "swimmer/index" 65.26 ms (1)
+Nov 29 13:16:05 symfony [info] {sfTimerManager} Action "swimmer/list" 34.99 ms (1)
+Nov 29 13:16:05 symfony [info] {sfTimerManager} Database 2.73 ms (1)
+Nov 29 13:16:05 symfony [info] {sfTimerManager} View "Success" for "swimmer/list" 15.30 ms (1)
+Nov 29 13:16:09 symfony [info] {sfContext} initialization
+Nov 29 13:16:09 symfony [info] {sfController} initialization
+Nov 29 13:16:09 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:16:09 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'create',)
+Nov 29 13:16:09 symfony [info] {sfController} dispatch request
+Nov 29 13:16:09 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:16:09 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:16:09 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:16:09 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:16:09 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:16:09 symfony [info] {sfAction} call "swimmerActions->executeCreate()"
+Nov 29 13:16:09 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:16:09 symfony [info] {sfView} initialize view for "swimmer/create"
+Nov 29 13:16:09 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/editSuccess.php"
+Nov 29 13:16:09 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:16:09 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:16:09 symfony [info] {sfCreole} executeQuery(): [2.04 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:16:09 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:16:09 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:16:09 symfony [info] {sfFilter} render to client
+Nov 29 13:16:09 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:16:09 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:16:09 symfony [info] {sfResponse} send content (20978 o)
+Nov 29 13:16:09 symfony [info] {sfTimerManager} Configuration 5.32 ms (12)
+Nov 29 13:16:09 symfony [info] {sfTimerManager} Action "swimmer/create" 2.81 ms (1)
+Nov 29 13:16:09 symfony [info] {sfTimerManager} View "Success" for "swimmer/create" 36.99 ms (1)
+Nov 29 13:16:09 symfony [info] {sfTimerManager} Database 2.04 ms (1)
+Nov 29 13:27:16 symfony [info] {sfContext} initialization
+Nov 29 13:27:16 symfony [info] {sfController} initialization
+Nov 29 13:27:16 symfony [info] {sfRouting} match route [default_index] "/:module"
+Nov 29 13:27:16 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'index',)
+Nov 29 13:27:16 symfony [info] {sfController} dispatch request
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:27:16 symfony [info] {sfAction} call "teamActions->executeIndex()"
+Nov 29 13:27:16 symfony [info] {sfAction} forward to action "team/list"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:27:16 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:27:16 symfony [info] {sfAction} call "teamActions->executeList()"
+Nov 29 13:27:16 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:27:16 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:27:16 symfony [info] {sfCreole} executeQuery(): [2.60 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:27:16 symfony [info] {sfView} initialize view for "team/list"
+Nov 29 13:27:16 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/listSuccess.php"
+Nov 29 13:27:16 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:27:16 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:27:16 symfony [info] {sfFilter} render to client
+Nov 29 13:27:16 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:27:16 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:27:16 symfony [info] {sfResponse} send content (22316 o)
+Nov 29 13:27:16 symfony [info] {sfTimerManager} Configuration 27.38 ms (17)
+Nov 29 13:27:16 symfony [info] {sfTimerManager} Action "team/index" 63.75 ms (1)
+Nov 29 13:27:16 symfony [info] {sfTimerManager} Action "team/list" 32.86 ms (1)
+Nov 29 13:27:16 symfony [info] {sfTimerManager} Database 2.60 ms (1)
+Nov 29 13:27:16 symfony [info] {sfTimerManager} View "Success" for "team/list" 20.10 ms (1)
+Nov 29 13:27:17 symfony [info] {sfContext} initialization
+Nov 29 13:27:18 symfony [info] {sfController} initialization
+Nov 29 13:27:18 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:27:18 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'create',)
+Nov 29 13:27:18 symfony [info] {sfController} dispatch request
+Nov 29 13:27:18 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:27:18 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:27:18 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:27:18 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:27:18 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:27:18 symfony [info] {sfAction} call "teamActions->executeCreate()"
+Nov 29 13:27:18 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:27:18 symfony [info] {sfView} initialize view for "team/create"
+Nov 29 13:27:18 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/editSuccess.php"
+Nov 29 13:27:18 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:27:18 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:27:18 symfony [info] {sfFilter} render to client
+Nov 29 13:27:18 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:27:18 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:27:18 symfony [info] {sfResponse} send content (18702 o)
+Nov 29 13:27:18 symfony [info] {sfTimerManager} Configuration 3.80 ms (12)
+Nov 29 13:27:18 symfony [info] {sfTimerManager} Action "team/create" 2.45 ms (1)
+Nov 29 13:27:18 symfony [info] {sfTimerManager} View "Success" for "team/create" 15.60 ms (1)
+Nov 29 13:27:23 symfony [info] {sfContext} initialization
+Nov 29 13:27:23 symfony [info] {sfController} initialization
+Nov 29 13:27:23 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:27:23 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'update',  'id' => '',  'name' => 'Blue',  'shortname' => 'B',  'commit' => 'save',)
+Nov 29 13:27:23 symfony [info] {sfController} dispatch request
+Nov 29 13:27:23 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:27:23 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:27:23 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:27:23 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:27:23 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:27:23 symfony [info] {sfAction} call "teamActions->executeUpdate()"
+Nov 29 13:27:23 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:27:23 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:27:23 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:27:23 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Nov 29 13:27:23 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Blue','B')
+Nov 29 13:27:23 symfony [info] {sfCreole} rolling back transaction.
+Nov 29 13:27:23 symfony [info] {sfCreole} rolling back transaction.
+Nov 29 13:27:23 symfony [error] {sfException} 
+Nov 29 13:28:12 symfony [info] {sfContext} initialization
+Nov 29 13:28:12 symfony [info] {sfController} initialization
+Nov 29 13:28:12 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:28:12 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'update',  'id' => '',  'name' => 'Blue',  'shortname' => 'B',  'commit' => 'save',)
+Nov 29 13:28:12 symfony [info] {sfController} dispatch request
+Nov 29 13:28:12 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:28:12 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:28:12 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:28:12 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:28:12 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:28:12 symfony [info] {sfAction} call "teamActions->executeUpdate()"
+Nov 29 13:28:12 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:28:12 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:28:12 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:28:12 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Nov 29 13:28:12 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Blue','B')
+Nov 29 13:28:12 symfony [info] {sfCreole} rolling back transaction.
+Nov 29 13:28:12 symfony [info] {sfCreole} rolling back transaction.
+Nov 29 13:28:12 symfony [error] {sfException} 
+Nov 29 13:28:22 symfony [info] {sfContext} initialization
+Nov 29 13:28:22 symfony [info] {sfController} initialization
+Nov 29 13:28:22 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:28:22 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'update',  'id' => '',  'name' => 'Blue',  'shortname' => 'B',  'commit' => 'save',)
+Nov 29 13:28:22 symfony [info] {sfController} dispatch request
+Nov 29 13:28:22 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:28:22 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:28:22 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:28:22 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:28:22 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:28:22 symfony [info] {sfAction} call "teamActions->executeUpdate()"
+Nov 29 13:28:22 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:28:22 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:28:22 symfony [error] {sfException} 
+Nov 29 13:28:29 symfony [info] {sfContext} initialization
+Nov 29 13:28:29 symfony [info] {sfController} initialization
+Nov 29 13:28:29 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:28:29 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'create',)
+Nov 29 13:28:29 symfony [info] {sfController} dispatch request
+Nov 29 13:28:29 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:28:29 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:28:29 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:28:29 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:28:29 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:28:29 symfony [info] {sfAction} call "teamActions->executeCreate()"
+Nov 29 13:28:29 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:28:29 symfony [info] {sfView} initialize view for "team/create"
+Nov 29 13:28:29 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/editSuccess.php"
+Nov 29 13:28:29 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:28:29 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:28:29 symfony [info] {sfFilter} render to client
+Nov 29 13:28:29 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:28:29 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:28:29 symfony [info] {sfResponse} send content (18702 o)
+Nov 29 13:28:29 symfony [info] {sfTimerManager} Configuration 5.43 ms (12)
+Nov 29 13:28:29 symfony [info] {sfTimerManager} Action "team/create" 2.86 ms (1)
+Nov 29 13:28:29 symfony [info] {sfTimerManager} View "Success" for "team/create" 14.79 ms (1)
+Nov 29 13:28:33 symfony [info] {sfContext} initialization
+Nov 29 13:28:33 symfony [info] {sfController} initialization
+Nov 29 13:28:33 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:28:33 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'update',  'id' => '',  'name' => 'Blue',  'shortname' => 'B',  'commit' => 'save',)
+Nov 29 13:28:33 symfony [info] {sfController} dispatch request
+Nov 29 13:28:33 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:28:33 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:28:33 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:28:33 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:28:33 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:28:33 symfony [info] {sfAction} call "teamActions->executeUpdate()"
+Nov 29 13:28:33 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:28:33 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:28:33 symfony [error] {sfException} 
+Nov 29 13:28:56 symfony [info] {sfContext} initialization
+Nov 29 13:28:56 symfony [info] {sfController} initialization
+Nov 29 13:28:56 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:28:56 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'update',  'id' => '',  'name' => 'Blue',  'shortname' => 'B',  'commit' => 'save',)
+Nov 29 13:28:56 symfony [info] {sfController} dispatch request
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:28:56 symfony [info] {sfAction} call "teamActions->executeUpdate()"
+Nov 29 13:28:56 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:28:56 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:28:56 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:28:56 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Nov 29 13:28:56 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Blue','B')
+Nov 29 13:28:56 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:28:56 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:28:56 symfony [info] {sfAction} redirect to "http://ubuntu/swimtimes/web/frontend_dev.php/team/show/id/1"
+Nov 29 13:28:56 symfony [info] {sfResponse} send status "HTTP/1.0 302 Found"
+Nov 29 13:28:56 symfony [info] {sfResponse} send header "Location": "http://ubuntu/swimtimes/web/frontend_dev.php/team/show/id/1"
+Nov 29 13:28:56 symfony [info] {sfResponse} send content (130 o)
+Nov 29 13:28:56 symfony [info] {sfContext} initialization
+Nov 29 13:28:56 symfony [info] {sfController} initialization
+Nov 29 13:28:56 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:28:56 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'show',  'id' => '1',)
+Nov 29 13:28:56 symfony [info] {sfController} dispatch request
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:28:56 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:28:56 symfony [info] {sfAction} call "teamActions->executeShow()"
+Nov 29 13:28:56 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:28:56 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=?
+Nov 29 13:28:56 symfony [info] {sfCreole} executeQuery(): [2.34 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=1
+Nov 29 13:28:56 symfony [info] {sfView} initialize view for "team/show"
+Nov 29 13:28:56 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/showSuccess.php"
+Nov 29 13:28:56 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:28:56 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:28:56 symfony [info] {sfFilter} render to client
+Nov 29 13:28:56 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:28:56 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:28:56 symfony [info] {sfResponse} send content (20515 o)
+Nov 29 13:28:56 symfony [info] {sfTimerManager} Configuration 1.96 ms (12)
+Nov 29 13:28:56 symfony [info] {sfTimerManager} Action "team/show" 26.62 ms (1)
+Nov 29 13:28:56 symfony [info] {sfTimerManager} Database 2.34 ms (1)
+Nov 29 13:28:56 symfony [info] {sfTimerManager} View "Success" for "team/show" 16.01 ms (1)
+Nov 29 13:28:58 symfony [info] {sfContext} initialization
+Nov 29 13:28:58 symfony [info] {sfController} initialization
+Nov 29 13:28:58 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:28:58 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'edit',  'id' => '1',)
+Nov 29 13:28:58 symfony [info] {sfController} dispatch request
+Nov 29 13:28:58 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:28:58 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:28:58 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:28:58 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:28:58 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:28:58 symfony [info] {sfAction} call "teamActions->executeEdit()"
+Nov 29 13:28:58 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:28:58 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=?
+Nov 29 13:28:58 symfony [info] {sfCreole} executeQuery(): [2.22 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=1
+Nov 29 13:28:58 symfony [info] {sfView} initialize view for "team/edit"
+Nov 29 13:28:58 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/editSuccess.php"
+Nov 29 13:28:58 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:28:58 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:28:58 symfony [info] {sfFilter} render to client
+Nov 29 13:28:58 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:28:58 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:28:58 symfony [info] {sfResponse} send content (21007 o)
+Nov 29 13:28:58 symfony [info] {sfTimerManager} Configuration 11.16 ms (12)
+Nov 29 13:28:58 symfony [info] {sfTimerManager} Action "team/edit" 39.34 ms (1)
+Nov 29 13:28:58 symfony [info] {sfTimerManager} Database 2.22 ms (1)
+Nov 29 13:28:58 symfony [info] {sfTimerManager} View "Success" for "team/edit" 17.52 ms (1)
+Nov 29 13:28:59 symfony [info] {sfContext} initialization
+Nov 29 13:28:59 symfony [info] {sfController} initialization
+Nov 29 13:28:59 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:28:59 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'show',  'id' => '1',)
+Nov 29 13:28:59 symfony [info] {sfController} dispatch request
+Nov 29 13:28:59 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:28:59 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:28:59 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:28:59 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:28:59 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:28:59 symfony [info] {sfAction} call "teamActions->executeShow()"
+Nov 29 13:28:59 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:28:59 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=?
+Nov 29 13:28:59 symfony [info] {sfCreole} executeQuery(): [2.05 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=1
+Nov 29 13:28:59 symfony [info] {sfView} initialize view for "team/show"
+Nov 29 13:28:59 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/showSuccess.php"
+Nov 29 13:28:59 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:28:59 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:28:59 symfony [info] {sfFilter} render to client
+Nov 29 13:28:59 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:28:59 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:28:59 symfony [info] {sfResponse} send content (20519 o)
+Nov 29 13:28:59 symfony [info] {sfTimerManager} Configuration 1.84 ms (12)
+Nov 29 13:28:59 symfony [info] {sfTimerManager} Action "team/show" 25.99 ms (1)
+Nov 29 13:28:59 symfony [info] {sfTimerManager} Database 2.05 ms (1)
+Nov 29 13:28:59 symfony [info] {sfTimerManager} View "Success" for "team/show" 10.40 ms (1)
+Nov 29 13:29:00 symfony [info] {sfContext} initialization
+Nov 29 13:29:00 symfony [info] {sfController} initialization
+Nov 29 13:29:00 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:00 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'list',)
+Nov 29 13:29:00 symfony [info] {sfController} dispatch request
+Nov 29 13:29:00 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:00 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:00 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:00 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:00 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:00 symfony [info] {sfAction} call "teamActions->executeList()"
+Nov 29 13:29:00 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:00 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:00 symfony [info] {sfCreole} executeQuery(): [2.25 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:00 symfony [info] {sfView} initialize view for "team/list"
+Nov 29 13:29:00 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/listSuccess.php"
+Nov 29 13:29:00 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:00 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:00 symfony [info] {sfFilter} render to client
+Nov 29 13:29:00 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:00 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:00 symfony [info] {sfResponse} send content (20305 o)
+Nov 29 13:29:00 symfony [info] {sfTimerManager} Configuration 1.85 ms (12)
+Nov 29 13:29:00 symfony [info] {sfTimerManager} Action "team/list" 25.63 ms (1)
+Nov 29 13:29:00 symfony [info] {sfTimerManager} Database 2.24 ms (1)
+Nov 29 13:29:00 symfony [info] {sfTimerManager} View "Success" for "team/list" 16.97 ms (1)
+Nov 29 13:29:02 symfony [info] {sfContext} initialization
+Nov 29 13:29:02 symfony [info] {sfController} initialization
+Nov 29 13:29:02 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:02 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'create',)
+Nov 29 13:29:02 symfony [info] {sfController} dispatch request
+Nov 29 13:29:02 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:02 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:02 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:02 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:02 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:02 symfony [info] {sfAction} call "teamActions->executeCreate()"
+Nov 29 13:29:02 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:29:02 symfony [info] {sfView} initialize view for "team/create"
+Nov 29 13:29:02 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/editSuccess.php"
+Nov 29 13:29:02 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:02 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:02 symfony [info] {sfFilter} render to client
+Nov 29 13:29:02 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:02 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:02 symfony [info] {sfResponse} send content (18704 o)
+Nov 29 13:29:02 symfony [info] {sfTimerManager} Configuration 9.10 ms (12)
+Nov 29 13:29:02 symfony [info] {sfTimerManager} Action "team/create" 8.72 ms (1)
+Nov 29 13:29:02 symfony [info] {sfTimerManager} View "Success" for "team/create" 13.66 ms (1)
+Nov 29 13:29:07 symfony [info] {sfContext} initialization
+Nov 29 13:29:07 symfony [info] {sfController} initialization
+Nov 29 13:29:07 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:07 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'update',  'id' => '',  'name' => 'K',  'shortname' => 'K',  'commit' => 'save',)
+Nov 29 13:29:07 symfony [info] {sfController} dispatch request
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:07 symfony [info] {sfAction} call "teamActions->executeUpdate()"
+Nov 29 13:29:07 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:07 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:29:07 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:29:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Nov 29 13:29:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('K','K')
+Nov 29 13:29:07 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:29:07 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:29:07 symfony [info] {sfAction} redirect to "http://ubuntu/swimtimes/web/frontend_dev.php/team/show/id/2"
+Nov 29 13:29:07 symfony [info] {sfResponse} send status "HTTP/1.0 302 Found"
+Nov 29 13:29:07 symfony [info] {sfResponse} send header "Location": "http://ubuntu/swimtimes/web/frontend_dev.php/team/show/id/2"
+Nov 29 13:29:07 symfony [info] {sfResponse} send content (130 o)
+Nov 29 13:29:07 symfony [info] {sfContext} initialization
+Nov 29 13:29:07 symfony [info] {sfController} initialization
+Nov 29 13:29:07 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:07 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'show',  'id' => '2',)
+Nov 29 13:29:07 symfony [info] {sfController} dispatch request
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:07 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:07 symfony [info] {sfAction} call "teamActions->executeShow()"
+Nov 29 13:29:07 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:07 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=?
+Nov 29 13:29:07 symfony [info] {sfCreole} executeQuery(): [2.16 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=2
+Nov 29 13:29:07 symfony [info] {sfView} initialize view for "team/show"
+Nov 29 13:29:07 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/showSuccess.php"
+Nov 29 13:29:07 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:07 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:07 symfony [info] {sfFilter} render to client
+Nov 29 13:29:07 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:07 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:07 symfony [info] {sfResponse} send content (20514 o)
+Nov 29 13:29:07 symfony [info] {sfTimerManager} Configuration 4.38 ms (12)
+Nov 29 13:29:07 symfony [info] {sfTimerManager} Action "team/show" 29.98 ms (1)
+Nov 29 13:29:07 symfony [info] {sfTimerManager} Database 2.15 ms (1)
+Nov 29 13:29:07 symfony [info] {sfTimerManager} View "Success" for "team/show" 13.22 ms (1)
+Nov 29 13:29:09 symfony [info] {sfContext} initialization
+Nov 29 13:29:09 symfony [info] {sfController} initialization
+Nov 29 13:29:09 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:09 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'list',)
+Nov 29 13:29:09 symfony [info] {sfController} dispatch request
+Nov 29 13:29:09 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:09 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:09 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:09 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:09 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:09 symfony [info] {sfAction} call "teamActions->executeList()"
+Nov 29 13:29:09 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:09 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:09 symfony [info] {sfCreole} executeQuery(): [2.28 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:09 symfony [info] {sfView} initialize view for "team/list"
+Nov 29 13:29:09 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/listSuccess.php"
+Nov 29 13:29:09 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:09 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:09 symfony [info] {sfFilter} render to client
+Nov 29 13:29:09 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:09 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:09 symfony [info] {sfResponse} send content (20429 o)
+Nov 29 13:29:09 symfony [info] {sfTimerManager} Configuration 2.94 ms (12)
+Nov 29 13:29:09 symfony [info] {sfTimerManager} Action "team/list" 43.56 ms (1)
+Nov 29 13:29:09 symfony [info] {sfTimerManager} Database 2.27 ms (1)
+Nov 29 13:29:09 symfony [info] {sfTimerManager} View "Success" for "team/list" 24.09 ms (1)
+Nov 29 13:29:10 symfony [info] {sfContext} initialization
+Nov 29 13:29:10 symfony [info] {sfController} initialization
+Nov 29 13:29:10 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:10 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'create',)
+Nov 29 13:29:10 symfony [info] {sfController} dispatch request
+Nov 29 13:29:10 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:10 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:10 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:10 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:10 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:10 symfony [info] {sfAction} call "teamActions->executeCreate()"
+Nov 29 13:29:10 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:29:10 symfony [info] {sfView} initialize view for "team/create"
+Nov 29 13:29:10 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/editSuccess.php"
+Nov 29 13:29:10 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:10 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:10 symfony [info] {sfFilter} render to client
+Nov 29 13:29:10 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:10 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:10 symfony [info] {sfResponse} send content (18707 o)
+Nov 29 13:29:10 symfony [info] {sfTimerManager} Configuration 1.90 ms (12)
+Nov 29 13:29:10 symfony [info] {sfTimerManager} Action "team/create" 2.81 ms (1)
+Nov 29 13:29:10 symfony [info] {sfTimerManager} View "Success" for "team/create" 13.20 ms (1)
+Nov 29 13:29:14 symfony [info] {sfContext} initialization
+Nov 29 13:29:14 symfony [info] {sfController} initialization
+Nov 29 13:29:14 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:14 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'update',  'id' => '',  'name' => 'Special K',  'shortname' => 'SK',  'commit' => 'save',)
+Nov 29 13:29:14 symfony [info] {sfController} dispatch request
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:14 symfony [info] {sfAction} call "teamActions->executeUpdate()"
+Nov 29 13:29:14 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:14 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:29:14 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:29:14 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Nov 29 13:29:14 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Special K','SK')
+Nov 29 13:29:14 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:29:14 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:29:14 symfony [info] {sfAction} redirect to "http://ubuntu/swimtimes/web/frontend_dev.php/team/show/id/3"
+Nov 29 13:29:14 symfony [info] {sfResponse} send status "HTTP/1.0 302 Found"
+Nov 29 13:29:14 symfony [info] {sfResponse} send header "Location": "http://ubuntu/swimtimes/web/frontend_dev.php/team/show/id/3"
+Nov 29 13:29:14 symfony [info] {sfResponse} send content (130 o)
+Nov 29 13:29:14 symfony [info] {sfContext} initialization
+Nov 29 13:29:14 symfony [info] {sfController} initialization
+Nov 29 13:29:14 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:14 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'show',  'id' => '3',)
+Nov 29 13:29:14 symfony [info] {sfController} dispatch request
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:14 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:14 symfony [info] {sfAction} call "teamActions->executeShow()"
+Nov 29 13:29:14 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:14 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=?
+Nov 29 13:29:14 symfony [info] {sfCreole} executeQuery(): [2.17 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=3
+Nov 29 13:29:14 symfony [info] {sfView} initialize view for "team/show"
+Nov 29 13:29:14 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/showSuccess.php"
+Nov 29 13:29:14 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:14 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:14 symfony [info] {sfFilter} render to client
+Nov 29 13:29:14 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:14 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:14 symfony [info] {sfResponse} send content (20522 o)
+Nov 29 13:29:15 symfony [info] {sfTimerManager} Configuration 1.90 ms (12)
+Nov 29 13:29:15 symfony [info] {sfTimerManager} Action "team/show" 25.39 ms (1)
+Nov 29 13:29:15 symfony [info] {sfTimerManager} Database 2.17 ms (1)
+Nov 29 13:29:15 symfony [info] {sfTimerManager} View "Success" for "team/show" 11.03 ms (1)
+Nov 29 13:29:16 symfony [info] {sfContext} initialization
+Nov 29 13:29:16 symfony [info] {sfController} initialization
+Nov 29 13:29:16 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:16 symfony [info] {sfRequest} request parameters array (  'module' => 'team',  'action' => 'list',)
+Nov 29 13:29:16 symfony [info] {sfController} dispatch request
+Nov 29 13:29:16 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:16 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:16 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:16 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:16 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:16 symfony [info] {sfAction} call "teamActions->executeList()"
+Nov 29 13:29:16 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:16 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:16 symfony [info] {sfCreole} executeQuery(): [2.60 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:16 symfony [info] {sfView} initialize view for "team/list"
+Nov 29 13:29:16 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/team/templates/listSuccess.php"
+Nov 29 13:29:16 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:16 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:16 symfony [info] {sfFilter} render to client
+Nov 29 13:29:16 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:16 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:16 symfony [info] {sfResponse} send content (20561 o)
+Nov 29 13:29:16 symfony [info] {sfTimerManager} Configuration 7.82 ms (12)
+Nov 29 13:29:16 symfony [info] {sfTimerManager} Action "team/list" 26.47 ms (1)
+Nov 29 13:29:16 symfony [info] {sfTimerManager} Database 2.59 ms (1)
+Nov 29 13:29:16 symfony [info] {sfTimerManager} View "Success" for "team/list" 16.64 ms (1)
+Nov 29 13:29:30 symfony [info] {sfContext} initialization
+Nov 29 13:29:30 symfony [info] {sfController} initialization
+Nov 29 13:29:30 symfony [info] {sfRouting} match route [default_index] "/:module"
+Nov 29 13:29:30 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'index',)
+Nov 29 13:29:30 symfony [info] {sfController} dispatch request
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:30 symfony [info] {sfAction} call "swimmerActions->executeIndex()"
+Nov 29 13:29:30 symfony [info] {sfAction} forward to action "swimmer/list"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:30 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:30 symfony [info] {sfAction} call "swimmerActions->executeList()"
+Nov 29 13:29:30 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:30 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:29:30 symfony [info] {sfCreole} executeQuery(): [3.29 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:29:30 symfony [info] {sfView} initialize view for "swimmer/list"
+Nov 29 13:29:30 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/listSuccess.php"
+Nov 29 13:29:30 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:30 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:30 symfony [info] {sfFilter} render to client
+Nov 29 13:29:30 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:30 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:30 symfony [info] {sfResponse} send content (22463 o)
+Nov 29 13:29:30 symfony [info] {sfTimerManager} Configuration 2.64 ms (16)
+Nov 29 13:29:30 symfony [info] {sfTimerManager} Action "swimmer/index" 52.85 ms (1)
+Nov 29 13:29:30 symfony [info] {sfTimerManager} Action "swimmer/list" 32.94 ms (1)
+Nov 29 13:29:30 symfony [info] {sfTimerManager} Database 3.28 ms (1)
+Nov 29 13:29:30 symfony [info] {sfTimerManager} View "Success" for "swimmer/list" 10.63 ms (1)
+Nov 29 13:29:31 symfony [info] {sfContext} initialization
+Nov 29 13:29:31 symfony [info] {sfContext} initialization
+Nov 29 13:29:31 symfony [info] {sfController} initialization
+Nov 29 13:29:31 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:31 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'create',)
+Nov 29 13:29:31 symfony [info] {sfController} dispatch request
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:31 symfony [info] {sfAction} call "swimmerActions->executeCreate()"
+Nov 29 13:29:31 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:29:31 symfony [info] {sfView} initialize view for "swimmer/create"
+Nov 29 13:29:31 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/editSuccess.php"
+Nov 29 13:29:31 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:31 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:31 symfony [info] {sfCreole} executeQuery(): [9.16 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:31 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:31 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:31 symfony [info] {sfFilter} render to client
+Nov 29 13:29:31 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:31 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:31 symfony [info] {sfResponse} send content (21066 o)
+Nov 29 13:29:31 symfony [info] {sfTimerManager} Configuration 3.56 ms (12)
+Nov 29 13:29:31 symfony [info] {sfTimerManager} Action "swimmer/create" 9.32 ms (1)
+Nov 29 13:29:31 symfony [info] {sfTimerManager} View "Success" for "swimmer/create" 121.30 ms (1)
+Nov 29 13:29:31 symfony [info] {sfTimerManager} Database 9.15 ms (1)
+Nov 29 13:29:31 symfony [info] {sfController} initialization
+Nov 29 13:29:31 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:29:31 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'create',)
+Nov 29 13:29:31 symfony [info] {sfController} dispatch request
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:29:31 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:29:31 symfony [info] {sfAction} call "swimmerActions->executeCreate()"
+Nov 29 13:29:31 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:29:31 symfony [info] {sfView} initialize view for "swimmer/create"
+Nov 29 13:29:31 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/editSuccess.php"
+Nov 29 13:29:31 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:29:31 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:31 symfony [info] {sfCreole} executeQuery(): [17.67 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:29:31 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:31 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:29:31 symfony [info] {sfFilter} render to client
+Nov 29 13:29:31 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:29:31 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:29:31 symfony [info] {sfResponse} send content (21069 o)
+Nov 29 13:29:32 symfony [info] {sfTimerManager} Configuration 1.99 ms (12)
+Nov 29 13:29:32 symfony [info] {sfTimerManager} Action "swimmer/create" 9.55 ms (1)
+Nov 29 13:29:32 symfony [info] {sfTimerManager} View "Success" for "swimmer/create" 211.16 ms (1)
+Nov 29 13:29:32 symfony [info] {sfTimerManager} Database 17.66 ms (1)
+Nov 29 13:32:29 symfony [info] {sfContext} initialization
+Nov 29 13:32:29 symfony [info] {sfController} initialization
+Nov 29 13:32:29 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:32:29 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'create',)
+Nov 29 13:32:29 symfony [info] {sfController} dispatch request
+Nov 29 13:32:29 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:32:29 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:32:29 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:32:29 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:32:29 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:32:29 symfony [info] {sfAction} call "swimmerActions->executeCreate()"
+Nov 29 13:32:29 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:32:29 symfony [info] {sfView} initialize view for "swimmer/create"
+Nov 29 13:32:29 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/editSuccess.php"
+Nov 29 13:32:40 symfony [info] {sfContext} initialization
+Nov 29 13:32:40 symfony [info] {sfController} initialization
+Nov 29 13:32:40 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:32:40 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'create',)
+Nov 29 13:32:40 symfony [info] {sfController} dispatch request
+Nov 29 13:32:40 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:32:40 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:32:40 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:32:40 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:32:40 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:32:40 symfony [info] {sfAction} call "swimmerActions->executeCreate()"
+Nov 29 13:32:40 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:32:40 symfony [info] {sfView} initialize view for "swimmer/create"
+Nov 29 13:32:40 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/editSuccess.php"
+Nov 29 13:32:40 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:32:40 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:32:40 symfony [info] {sfCreole} executeQuery(): [2.87 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team
+Nov 29 13:32:40 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:32:40 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:32:40 symfony [info] {sfFilter} render to client
+Nov 29 13:32:40 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:32:40 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:32:40 symfony [info] {sfResponse} send content (21108 o)
+Nov 29 13:32:40 symfony [info] {sfTimerManager} Configuration 9.75 ms (12)
+Nov 29 13:32:40 symfony [info] {sfTimerManager} Action "swimmer/create" 2.72 ms (1)
+Nov 29 13:32:40 symfony [info] {sfTimerManager} View "Success" for "swimmer/create" 41.79 ms (1)
+Nov 29 13:32:40 symfony [info] {sfTimerManager} Database 2.87 ms (1)
+Nov 29 13:33:46 symfony [info] {sfContext} initialization
+Nov 29 13:33:46 symfony [info] {sfController} initialization
+Nov 29 13:33:46 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:33:46 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'update',  'id' => '',  'name' => 'Joe Blow',  'year' => '2006',  'team_id' => '1',  'commit' => 'save',)
+Nov 29 13:33:46 symfony [info] {sfController} dispatch request
+Nov 29 13:33:46 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:33:46 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:33:46 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:33:46 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:33:46 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:33:46 symfony [info] {sfAction} call "swimmerActions->executeUpdate()"
+Nov 29 13:33:47 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:33:47 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:33:47 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:33:47 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES (?,?,?)
+Nov 29 13:33:47 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES ('Joe Blow',2006,1)
+Nov 29 13:33:47 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:33:47 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:33:47 symfony [info] {sfAction} redirect to "http://ubuntu/swimtimes/web/frontend_dev.php/swimmer/show/id/1"
+Nov 29 13:33:47 symfony [info] {sfResponse} send status "HTTP/1.0 302 Found"
+Nov 29 13:33:47 symfony [info] {sfResponse} send header "Location": "http://ubuntu/swimtimes/web/frontend_dev.php/swimmer/show/id/1"
+Nov 29 13:33:47 symfony [info] {sfResponse} send content (133 o)
+Nov 29 13:33:47 symfony [info] {sfContext} initialization
+Nov 29 13:33:47 symfony [info] {sfController} initialization
+Nov 29 13:33:47 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:33:47 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'show',  'id' => '1',)
+Nov 29 13:33:47 symfony [info] {sfController} dispatch request
+Nov 29 13:33:47 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:33:47 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:33:47 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:33:47 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:33:47 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:33:47 symfony [info] {sfAction} call "swimmerActions->executeShow()"
+Nov 29 13:33:47 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:33:47 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:33:47 symfony [info] {sfCreole} executeQuery(): [2.12 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:33:47 symfony [info] {sfView} initialize view for "swimmer/show"
+Nov 29 13:33:47 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/showSuccess.php"
+Nov 29 13:33:47 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:33:47 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:33:47 symfony [info] {sfFilter} render to client
+Nov 29 13:33:47 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:33:47 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:33:47 symfony [info] {sfResponse} send content (20697 o)
+Nov 29 13:33:47 symfony [info] {sfTimerManager} Configuration 8.87 ms (12)
+Nov 29 13:33:47 symfony [info] {sfTimerManager} Action "swimmer/show" 27.24 ms (1)
+Nov 29 13:33:47 symfony [info] {sfTimerManager} Database 2.12 ms (1)
+Nov 29 13:33:47 symfony [info] {sfTimerManager} View "Success" for "swimmer/show" 12.75 ms (1)
+Nov 29 13:33:49 symfony [info] {sfContext} initialization
+Nov 29 13:33:49 symfony [info] {sfController} initialization
+Nov 29 13:33:49 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:33:49 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'list',)
+Nov 29 13:33:49 symfony [info] {sfController} dispatch request
+Nov 29 13:33:49 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:33:49 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:33:49 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:33:49 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:33:49 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:33:49 symfony [info] {sfAction} call "swimmerActions->executeList()"
+Nov 29 13:33:49 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:33:49 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:33:49 symfony [info] {sfCreole} executeQuery(): [2.10 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:33:49 symfony [info] {sfView} initialize view for "swimmer/list"
+Nov 29 13:33:49 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/listSuccess.php"
+Nov 29 13:33:49 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:33:49 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:33:49 symfony [info] {sfFilter} render to client
+Nov 29 13:33:49 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:33:49 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:33:49 symfony [info] {sfResponse} send content (20477 o)
+Nov 29 13:33:49 symfony [info] {sfTimerManager} Configuration 10.63 ms (12)
+Nov 29 13:33:49 symfony [info] {sfTimerManager} Action "swimmer/list" 28.95 ms (1)
+Nov 29 13:33:49 symfony [info] {sfTimerManager} Database 2.10 ms (1)
+Nov 29 13:33:49 symfony [info] {sfTimerManager} View "Success" for "swimmer/list" 11.07 ms (1)
+Nov 29 13:34:05 symfony [info] {sfContext} initialization
+Nov 29 13:34:05 symfony [info] {sfController} initialization
+Nov 29 13:34:05 symfony [info] {sfRequest} request parameters array (  'module' => 'default',  'action' => 'error404',)
+Nov 29 13:34:05 symfony [info] {sfController} dispatch request
+Nov 29 13:34:05 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:34:05 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:34:05 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:34:05 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:34:05 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:34:05 symfony [info] {sfAction} change layout to "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout"
+Nov 29 13:34:05 symfony [info] {sfAction} call "defaultActions->executeError404()"
+Nov 29 13:34:05 symfony [info] {sfView} initialize view for "default/error404"
+Nov 29 13:34:05 symfony [info] {sfView} render "/var/www/swimtimes/config/../data/symfony/modules/default/templates/error404Success.php"
+Nov 29 13:34:05 symfony [info] {sfView} decorate content with "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Nov 29 13:34:05 symfony [info] {sfView} render "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Nov 29 13:34:05 symfony [info] {sfFilter} render to client
+Nov 29 13:34:05 symfony [info] {sfResponse} send status "HTTP/1.0 404 Not Found"
+Nov 29 13:34:05 symfony [info] {sfResponse} send header "Status": "404 Not Found"
+Nov 29 13:34:05 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:34:05 symfony [info] {sfResponse} send content (19849 o)
+Nov 29 13:34:05 symfony [info] {sfTimerManager} Configuration 1.81 ms (12)
+Nov 29 13:34:05 symfony [info] {sfTimerManager} Action "default/error404" 0.42 ms (1)
+Nov 29 13:34:05 symfony [info] {sfTimerManager} View "Success" for "default/error404" 11.82 ms (1)
+Nov 29 13:34:08 symfony [info] {sfContext} initialization
+Nov 29 13:34:08 symfony [info] {sfController} initialization
+Nov 29 13:34:08 symfony [info] {sfRouting} match route [default_index] "/:module"
+Nov 29 13:34:08 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'index',)
+Nov 29 13:34:08 symfony [info] {sfController} dispatch request
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:34:08 symfony [info] {sfAction} call "timeActions->executeIndex()"
+Nov 29 13:34:08 symfony [info] {sfAction} forward to action "time/list"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:34:08 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:34:08 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:34:08 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:34:08 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:34:08 symfony [info] {sfCreole} executeQuery(): [6.88 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:34:08 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:34:08 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:34:08 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:34:08 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:34:08 symfony [info] {sfFilter} render to client
+Nov 29 13:34:08 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:34:08 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:34:08 symfony [info] {sfResponse} send content (22576 o)
+Nov 29 13:34:08 symfony [info] {sfTimerManager} Configuration 29.86 ms (17)
+Nov 29 13:34:08 symfony [info] {sfTimerManager} Action "time/index" 117.00 ms (1)
+Nov 29 13:34:08 symfony [info] {sfTimerManager} Action "time/list" 53.65 ms (1)
+Nov 29 13:34:08 symfony [info] {sfTimerManager} Database 6.87 ms (1)
+Nov 29 13:34:08 symfony [info] {sfTimerManager} View "Success" for "time/list" 41.97 ms (1)
+Nov 29 13:34:10 symfony [info] {sfContext} initialization
+Nov 29 13:34:10 symfony [info] {sfController} initialization
+Nov 29 13:34:10 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:34:10 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'create',)
+Nov 29 13:34:10 symfony [info] {sfController} dispatch request
+Nov 29 13:34:10 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:34:10 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:34:10 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:34:10 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:34:10 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:34:10 symfony [info] {sfAction} call "timeActions->executeCreate()"
+Nov 29 13:34:10 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:34:10 symfony [info] {sfView} initialize view for "time/create"
+Nov 29 13:34:10 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/editSuccess.php"
+Nov 29 13:34:10 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:34:10 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:34:10 symfony [info] {sfCreole} executeQuery(): [2.05 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:34:10 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet
+Nov 29 13:34:10 symfony [info] {sfCreole} executeQuery(): [0.33 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet
+Nov 29 13:34:10 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:34:10 symfony [info] {sfCreole} executeQuery(): [0.42 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:34:10 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:34:10 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:34:10 symfony [info] {sfFilter} render to client
+Nov 29 13:34:10 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:34:10 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:34:10 symfony [info] {sfResponse} send content (23425 o)
+Nov 29 13:34:10 symfony [info] {sfTimerManager} Configuration 23.08 ms (12)
+Nov 29 13:34:10 symfony [info] {sfTimerManager} Action "time/create" 6.20 ms (1)
+Nov 29 13:34:10 symfony [info] {sfTimerManager} View "Success" for "time/create" 54.00 ms (1)
+Nov 29 13:34:10 symfony [info] {sfTimerManager} Database 2.80 ms (3)
+Nov 29 13:34:33 symfony [info] {sfContext} initialization
+Nov 29 13:34:33 symfony [info] {sfController} initialization
+Nov 29 13:34:33 symfony [info] {sfRequest} request parameters array (  'module' => 'default',  'action' => 'error404',)
+Nov 29 13:34:33 symfony [info] {sfController} dispatch request
+Nov 29 13:34:33 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:34:33 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:34:33 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:34:33 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:34:33 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:34:33 symfony [info] {sfAction} change layout to "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout"
+Nov 29 13:34:33 symfony [info] {sfAction} call "defaultActions->executeError404()"
+Nov 29 13:34:33 symfony [info] {sfView} initialize view for "default/error404"
+Nov 29 13:34:33 symfony [info] {sfView} render "/var/www/swimtimes/config/../data/symfony/modules/default/templates/error404Success.php"
+Nov 29 13:34:33 symfony [info] {sfView} decorate content with "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Nov 29 13:34:33 symfony [info] {sfView} render "/var/www/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Nov 29 13:34:33 symfony [info] {sfFilter} render to client
+Nov 29 13:34:33 symfony [info] {sfResponse} send status "HTTP/1.0 404 Not Found"
+Nov 29 13:34:33 symfony [info] {sfResponse} send header "Status": "404 Not Found"
+Nov 29 13:34:33 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:34:33 symfony [info] {sfResponse} send content (19849 o)
+Nov 29 13:34:33 symfony [info] {sfTimerManager} Configuration 1.90 ms (12)
+Nov 29 13:34:33 symfony [info] {sfTimerManager} Action "default/error404" 0.32 ms (1)
+Nov 29 13:34:33 symfony [info] {sfTimerManager} View "Success" for "default/error404" 12.56 ms (1)
+Nov 29 13:34:36 symfony [info] {sfContext} initialization
+Nov 29 13:34:36 symfony [info] {sfController} initialization
+Nov 29 13:34:36 symfony [info] {sfRouting} match route [default_index] "/:module"
+Nov 29 13:34:36 symfony [info] {sfRequest} request parameters array (  'module' => 'meet',  'action' => 'index',)
+Nov 29 13:34:36 symfony [info] {sfController} dispatch request
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:34:36 symfony [info] {sfAction} call "meetActions->executeIndex()"
+Nov 29 13:34:36 symfony [info] {sfAction} forward to action "meet/list"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:34:36 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:34:36 symfony [info] {sfAction} call "meetActions->executeList()"
+Nov 29 13:34:36 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:34:36 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet
+Nov 29 13:34:36 symfony [info] {sfCreole} executeQuery(): [4.22 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet
+Nov 29 13:34:36 symfony [info] {sfView} initialize view for "meet/list"
+Nov 29 13:34:36 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/meet/templates/listSuccess.php"
+Nov 29 13:34:36 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:34:36 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:34:36 symfony [info] {sfFilter} render to client
+Nov 29 13:34:36 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:34:36 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:34:36 symfony [info] {sfResponse} send content (22387 o)
+Nov 29 13:34:36 symfony [info] {sfTimerManager} Configuration 69.78 ms (17)
+Nov 29 13:34:36 symfony [info] {sfTimerManager} Action "meet/index" 159.09 ms (1)
+Nov 29 13:34:36 symfony [info] {sfTimerManager} Action "meet/list" 80.63 ms (1)
+Nov 29 13:34:36 symfony [info] {sfTimerManager} Database 4.22 ms (1)
+Nov 29 13:34:36 symfony [info] {sfTimerManager} View "Success" for "meet/list" 48.90 ms (1)
+Nov 29 13:34:38 symfony [info] {sfContext} initialization
+Nov 29 13:34:38 symfony [info] {sfController} initialization
+Nov 29 13:34:38 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:34:38 symfony [info] {sfRequest} request parameters array (  'module' => 'meet',  'action' => 'create',)
+Nov 29 13:34:38 symfony [info] {sfController} dispatch request
+Nov 29 13:34:38 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:34:38 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:34:38 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:34:38 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:34:38 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:34:38 symfony [info] {sfAction} call "meetActions->executeCreate()"
+Nov 29 13:34:38 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:34:38 symfony [info] {sfView} initialize view for "meet/create"
+Nov 29 13:34:38 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/meet/templates/editSuccess.php"
+Nov 29 13:34:38 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:34:38 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:34:38 symfony [info] {sfFilter} render to client
+Nov 29 13:34:38 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:34:38 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:34:38 symfony [info] {sfResponse} send content (20096 o)
+Nov 29 13:34:38 symfony [info] {sfTimerManager} Configuration 3.36 ms (12)
+Nov 29 13:34:38 symfony [info] {sfTimerManager} Action "meet/create" 3.03 ms (1)
+Nov 29 13:34:38 symfony [info] {sfTimerManager} View "Success" for "meet/create" 20.22 ms (1)
+Nov 29 13:35:08 symfony [info] {sfContext} initialization
+Nov 29 13:35:09 symfony [info] {sfController} initialization
+Nov 29 13:35:09 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:35:09 symfony [info] {sfRequest} request parameters array (  'module' => 'meet',  'action' => 'update',  'id' => '',  'name' => 'Morgan Beyers Invitational',  'startdate' => '2006-12-01',  'enddate' => '2006-12-02',  'commit' => 'save',)
+Nov 29 13:35:09 symfony [info] {sfController} dispatch request
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:09 symfony [info] {sfAction} call "meetActions->executeUpdate()"
+Nov 29 13:35:09 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:35:09 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:35:09 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:35:09 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_meet (NAME,STARTDATE,ENDDATE) VALUES (?,?,?)
+Nov 29 13:35:09 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_meet (NAME,STARTDATE,ENDDATE) VALUES ('Morgan Beyers Invitational','2006-12-01 00:00:00','2006-12-02 00:00:00')
+Nov 29 13:35:09 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:35:09 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:35:09 symfony [info] {sfAction} redirect to "http://ubuntu/swimtimes/web/frontend_dev.php/meet/show/id/1"
+Nov 29 13:35:09 symfony [info] {sfResponse} send status "HTTP/1.0 302 Found"
+Nov 29 13:35:09 symfony [info] {sfResponse} send header "Location": "http://ubuntu/swimtimes/web/frontend_dev.php/meet/show/id/1"
+Nov 29 13:35:09 symfony [info] {sfResponse} send content (130 o)
+Nov 29 13:35:09 symfony [info] {sfContext} initialization
+Nov 29 13:35:09 symfony [info] {sfController} initialization
+Nov 29 13:35:09 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:35:09 symfony [info] {sfRequest} request parameters array (  'module' => 'meet',  'action' => 'show',  'id' => '1',)
+Nov 29 13:35:09 symfony [info] {sfController} dispatch request
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:09 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:09 symfony [info] {sfAction} call "meetActions->executeShow()"
+Nov 29 13:35:09 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:35:09 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:35:09 symfony [info] {sfCreole} executeQuery(): [2.13 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:35:09 symfony [info] {sfView} initialize view for "meet/show"
+Nov 29 13:35:09 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/meet/templates/showSuccess.php"
+Nov 29 13:35:09 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:09 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:09 symfony [info] {sfFilter} render to client
+Nov 29 13:35:09 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:35:09 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:35:09 symfony [info] {sfResponse} send content (20666 o)
+Nov 29 13:35:09 symfony [info] {sfTimerManager} Configuration 1.97 ms (12)
+Nov 29 13:35:09 symfony [info] {sfTimerManager} Action "meet/show" 28.80 ms (1)
+Nov 29 13:35:09 symfony [info] {sfTimerManager} Database 2.12 ms (1)
+Nov 29 13:35:09 symfony [info] {sfTimerManager} View "Success" for "meet/show" 13.03 ms (1)
+Nov 29 13:35:29 symfony [info] {sfContext} initialization
+Nov 29 13:35:29 symfony [info] {sfController} initialization
+Nov 29 13:35:29 symfony [info] {sfRouting} match route [default_index] "/:module"
+Nov 29 13:35:29 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'index',)
+Nov 29 13:35:29 symfony [info] {sfController} dispatch request
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:29 symfony [info] {sfAction} call "eventActions->executeIndex()"
+Nov 29 13:35:29 symfony [info] {sfAction} forward to action "event/list"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:29 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:29 symfony [info] {sfAction} call "eventActions->executeList()"
+Nov 29 13:35:29 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:35:29 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:35:29 symfony [info] {sfCreole} executeQuery(): [2.32 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:35:29 symfony [info] {sfView} initialize view for "event/list"
+Nov 29 13:35:29 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/event/templates/listSuccess.php"
+Nov 29 13:35:29 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:29 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:29 symfony [info] {sfFilter} render to client
+Nov 29 13:35:29 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:35:29 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:35:29 symfony [info] {sfResponse} send content (22343 o)
+Nov 29 13:35:29 symfony [info] {sfTimerManager} Configuration 23.81 ms (17)
+Nov 29 13:35:29 symfony [info] {sfTimerManager} Action "event/index" 55.90 ms (1)
+Nov 29 13:35:29 symfony [info] {sfTimerManager} Action "event/list" 26.62 ms (1)
+Nov 29 13:35:29 symfony [info] {sfTimerManager} Database 2.32 ms (1)
+Nov 29 13:35:29 symfony [info] {sfTimerManager} View "Success" for "event/list" 18.72 ms (1)
+Nov 29 13:35:30 symfony [info] {sfContext} initialization
+Nov 29 13:35:30 symfony [info] {sfController} initialization
+Nov 29 13:35:30 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:35:30 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'create',)
+Nov 29 13:35:30 symfony [info] {sfController} dispatch request
+Nov 29 13:35:30 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:30 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:30 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:30 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:30 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:30 symfony [info] {sfAction} call "eventActions->executeCreate()"
+Nov 29 13:35:30 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:35:30 symfony [info] {sfView} initialize view for "event/create"
+Nov 29 13:35:30 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/event/templates/editSuccess.php"
+Nov 29 13:35:30 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:30 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:30 symfony [info] {sfFilter} render to client
+Nov 29 13:35:30 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:35:30 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:35:30 symfony [info] {sfResponse} send content (18715 o)
+Nov 29 13:35:30 symfony [info] {sfTimerManager} Configuration 1.94 ms (12)
+Nov 29 13:35:30 symfony [info] {sfTimerManager} Action "event/create" 3.16 ms (1)
+Nov 29 13:35:30 symfony [info] {sfTimerManager} View "Success" for "event/create" 15.46 ms (1)
+Nov 29 13:35:37 symfony [info] {sfContext} initialization
+Nov 29 13:35:37 symfony [info] {sfController} initialization
+Nov 29 13:35:37 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:35:37 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'update',  'id' => '',  'name' => '500 Free',  'distance' => '500',  'commit' => 'save',)
+Nov 29 13:35:37 symfony [info] {sfController} dispatch request
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:37 symfony [info] {sfAction} call "eventActions->executeUpdate()"
+Nov 29 13:35:37 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:35:37 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:35:37 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:35:37 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Nov 29 13:35:37 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('500 Free',500)
+Nov 29 13:35:37 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:35:37 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:35:37 symfony [info] {sfAction} redirect to "http://ubuntu/swimtimes/web/frontend_dev.php/event/show/id/1"
+Nov 29 13:35:37 symfony [info] {sfResponse} send status "HTTP/1.0 302 Found"
+Nov 29 13:35:37 symfony [info] {sfResponse} send header "Location": "http://ubuntu/swimtimes/web/frontend_dev.php/event/show/id/1"
+Nov 29 13:35:37 symfony [info] {sfResponse} send content (131 o)
+Nov 29 13:35:37 symfony [info] {sfContext} initialization
+Nov 29 13:35:37 symfony [info] {sfController} initialization
+Nov 29 13:35:37 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:35:37 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'show',  'id' => '1',)
+Nov 29 13:35:37 symfony [info] {sfController} dispatch request
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:37 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:37 symfony [info] {sfAction} call "eventActions->executeShow()"
+Nov 29 13:35:37 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:35:37 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:35:37 symfony [info] {sfCreole} executeQuery(): [2.14 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:35:37 symfony [info] {sfView} initialize view for "event/show"
+Nov 29 13:35:37 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/event/templates/showSuccess.php"
+Nov 29 13:35:37 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:37 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:37 symfony [info] {sfFilter} render to client
+Nov 29 13:35:37 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:35:37 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:35:37 symfony [info] {sfResponse} send content (20550 o)
+Nov 29 13:35:37 symfony [info] {sfTimerManager} Configuration 1.90 ms (12)
+Nov 29 13:35:37 symfony [info] {sfTimerManager} Action "event/show" 29.00 ms (1)
+Nov 29 13:35:37 symfony [info] {sfTimerManager} Database 2.13 ms (1)
+Nov 29 13:35:37 symfony [info] {sfTimerManager} View "Success" for "event/show" 11.23 ms (1)
+Nov 29 13:35:39 symfony [info] {sfContext} initialization
+Nov 29 13:35:39 symfony [info] {sfController} initialization
+Nov 29 13:35:39 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:35:39 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'edit',  'id' => '1',)
+Nov 29 13:35:39 symfony [info] {sfController} dispatch request
+Nov 29 13:35:39 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:39 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:39 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:39 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:39 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:39 symfony [info] {sfAction} call "eventActions->executeEdit()"
+Nov 29 13:35:39 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:35:39 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:35:39 symfony [info] {sfCreole} executeQuery(): [2.07 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:35:39 symfony [info] {sfView} initialize view for "event/edit"
+Nov 29 13:35:39 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/event/templates/editSuccess.php"
+Nov 29 13:35:39 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:39 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:39 symfony [info] {sfFilter} render to client
+Nov 29 13:35:39 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:35:39 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:35:39 symfony [info] {sfResponse} send content (21040 o)
+Nov 29 13:35:39 symfony [info] {sfTimerManager} Configuration 14.87 ms (12)
+Nov 29 13:35:39 symfony [info] {sfTimerManager} Action "event/edit" 31.39 ms (1)
+Nov 29 13:35:39 symfony [info] {sfTimerManager} Database 2.07 ms (1)
+Nov 29 13:35:39 symfony [info] {sfTimerManager} View "Success" for "event/edit" 14.63 ms (1)
+Nov 29 13:35:40 symfony [info] {sfContext} initialization
+Nov 29 13:35:40 symfony [info] {sfController} initialization
+Nov 29 13:35:40 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:35:40 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'show',  'id' => '1',)
+Nov 29 13:35:40 symfony [info] {sfController} dispatch request
+Nov 29 13:35:40 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:40 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:40 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:40 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:40 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:40 symfony [info] {sfAction} call "eventActions->executeShow()"
+Nov 29 13:35:40 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:35:40 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:35:40 symfony [info] {sfCreole} executeQuery(): [2.29 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:35:40 symfony [info] {sfView} initialize view for "event/show"
+Nov 29 13:35:40 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/event/templates/showSuccess.php"
+Nov 29 13:35:40 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:40 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:40 symfony [info] {sfFilter} render to client
+Nov 29 13:35:40 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:35:40 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:35:40 symfony [info] {sfResponse} send content (20553 o)
+Nov 29 13:35:40 symfony [info] {sfTimerManager} Configuration 2.00 ms (12)
+Nov 29 13:35:40 symfony [info] {sfTimerManager} Action "event/show" 26.78 ms (1)
+Nov 29 13:35:40 symfony [info] {sfTimerManager} Database 2.29 ms (1)
+Nov 29 13:35:40 symfony [info] {sfTimerManager} View "Success" for "event/show" 12.16 ms (1)
+Nov 29 13:35:41 symfony [info] {sfContext} initialization
+Nov 29 13:35:41 symfony [info] {sfController} initialization
+Nov 29 13:35:41 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:35:41 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'list',)
+Nov 29 13:35:41 symfony [info] {sfController} dispatch request
+Nov 29 13:35:41 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:35:41 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:35:41 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:35:41 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:35:41 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:35:41 symfony [info] {sfAction} call "eventActions->executeList()"
+Nov 29 13:35:41 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:35:41 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:35:41 symfony [info] {sfCreole} executeQuery(): [2.07 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:35:41 symfony [info] {sfView} initialize view for "event/list"
+Nov 29 13:35:41 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/event/templates/listSuccess.php"
+Nov 29 13:35:41 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:41 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:35:41 symfony [info] {sfFilter} render to client
+Nov 29 13:35:41 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:35:41 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:35:41 symfony [info] {sfResponse} send content (20338 o)
+Nov 29 13:35:41 symfony [info] {sfTimerManager} Configuration 2.47 ms (12)
+Nov 29 13:35:41 symfony [info] {sfTimerManager} Action "event/list" 25.73 ms (1)
+Nov 29 13:35:41 symfony [info] {sfTimerManager} Database 2.07 ms (1)
+Nov 29 13:35:41 symfony [info] {sfTimerManager} View "Success" for "event/list" 10.48 ms (1)
+Nov 29 13:36:13 symfony [info] {sfContext} initialization
+Nov 29 13:36:13 symfony [info] {sfController} initialization
+Nov 29 13:36:13 symfony [info] {sfRouting} match route [default_index] "/:module"
+Nov 29 13:36:13 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'index',)
+Nov 29 13:36:13 symfony [info] {sfController} dispatch request
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:36:13 symfony [info] {sfAction} call "timeActions->executeIndex()"
+Nov 29 13:36:13 symfony [info] {sfAction} forward to action "time/list"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:36:13 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:36:13 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:36:13 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:36:13 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:36:13 symfony [info] {sfCreole} executeQuery(): [2.32 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:36:13 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:36:13 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:36:13 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:36:13 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:36:13 symfony [info] {sfFilter} render to client
+Nov 29 13:36:13 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:36:13 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:36:13 symfony [info] {sfResponse} send content (22574 o)
+Nov 29 13:36:13 symfony [info] {sfTimerManager} Configuration 8.12 ms (16)
+Nov 29 13:36:13 symfony [info] {sfTimerManager} Action "time/index" 57.79 ms (1)
+Nov 29 13:36:13 symfony [info] {sfTimerManager} Action "time/list" 36.53 ms (1)
+Nov 29 13:36:13 symfony [info] {sfTimerManager} Database 2.32 ms (1)
+Nov 29 13:36:13 symfony [info] {sfTimerManager} View "Success" for "time/list" 11.48 ms (1)
+Nov 29 13:36:14 symfony [info] {sfContext} initialization
+Nov 29 13:36:14 symfony [info] {sfController} initialization
+Nov 29 13:36:14 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:36:14 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'create',)
+Nov 29 13:36:14 symfony [info] {sfController} dispatch request
+Nov 29 13:36:14 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:36:14 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:36:14 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:36:14 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:36:14 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:36:14 symfony [info] {sfAction} call "timeActions->executeCreate()"
+Nov 29 13:36:14 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:36:14 symfony [info] {sfView} initialize view for "time/create"
+Nov 29 13:36:14 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/editSuccess.php"
+Nov 29 13:36:14 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:36:14 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:36:14 symfony [info] {sfCreole} executeQuery(): [3.26 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:36:14 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet
+Nov 29 13:36:14 symfony [info] {sfCreole} executeQuery(): [0.32 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet
+Nov 29 13:36:14 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:36:14 symfony [info] {sfCreole} executeQuery(): [0.33 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:36:14 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:36:14 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:36:14 symfony [info] {sfFilter} render to client
+Nov 29 13:36:14 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:36:14 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:36:14 symfony [info] {sfResponse} send content (23482 o)
+Nov 29 13:36:14 symfony [info] {sfTimerManager} Configuration 1.95 ms (12)
+Nov 29 13:36:14 symfony [info] {sfTimerManager} Action "time/create" 3.29 ms (1)
+Nov 29 13:36:14 symfony [info] {sfTimerManager} View "Success" for "time/create" 61.95 ms (1)
+Nov 29 13:36:14 symfony [info] {sfTimerManager} Database 3.90 ms (3)
+Nov 29 13:37:07 symfony [info] {sfContext} initialization
+Nov 29 13:37:07 symfony [info] {sfController} initialization
+Nov 29 13:37:07 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:37:07 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'create',)
+Nov 29 13:37:07 symfony [info] {sfController} dispatch request
+Nov 29 13:37:07 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:37:07 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:37:07 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:37:07 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:37:07 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:37:07 symfony [info] {sfAction} call "timeActions->executeCreate()"
+Nov 29 13:37:07 symfony [info] {sfAction} change template to "edit"
+Nov 29 13:37:07 symfony [info] {sfView} initialize view for "time/create"
+Nov 29 13:37:07 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/editSuccess.php"
+Nov 29 13:37:07 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:37:07 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:37:07 symfony [info] {sfCreole} executeQuery(): [2.04 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Nov 29 13:37:07 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet
+Nov 29 13:37:07 symfony [info] {sfCreole} executeQuery(): [0.36 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet
+Nov 29 13:37:07 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:37:07 symfony [info] {sfCreole} executeQuery(): [0.31 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event
+Nov 29 13:37:07 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:37:07 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:37:07 symfony [info] {sfFilter} render to client
+Nov 29 13:37:07 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:37:07 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:37:07 symfony [info] {sfResponse} send content (23546 o)
+Nov 29 13:37:07 symfony [info] {sfTimerManager} Configuration 1.87 ms (12)
+Nov 29 13:37:07 symfony [info] {sfTimerManager} Action "time/create" 3.38 ms (1)
+Nov 29 13:37:07 symfony [info] {sfTimerManager} View "Success" for "time/create" 53.45 ms (1)
+Nov 29 13:37:07 symfony [info] {sfTimerManager} Database 2.70 ms (3)
+Nov 29 13:37:48 symfony [info] {sfContext} initialization
+Nov 29 13:37:48 symfony [info] {sfController} initialization
+Nov 29 13:37:48 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:37:48 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'update',  'id' => '',  'swimmer_id' => '1',  'meet_id' => '1',  'event_id' => '1',  'time' => '51.59',  'place' => '1',  'lane' => '3',  'commit' => 'save',)
+Nov 29 13:37:48 symfony [info] {sfController} dispatch request
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:37:48 symfony [info] {sfAction} call "timeActions->executeUpdate()"
+Nov 29 13:37:48 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:37:48 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:37:48 symfony [info] {sfCreole} beginning transaction.
+Nov 29 13:37:48 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_time (SWIMMER_ID,MEET_ID,EVENT_ID,TIME,PLACE,LANE) VALUES (?,?,?,?,?,?)
+Nov 29 13:37:48 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_time (SWIMMER_ID,MEET_ID,EVENT_ID,TIME,PLACE,LANE) VALUES (1,1,1,51.59,1,3)
+Nov 29 13:37:48 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:37:48 symfony [info] {sfCreole} committing transaction.
+Nov 29 13:37:48 symfony [info] {sfAction} redirect to "http://ubuntu/swimtimes/web/frontend_dev.php/time/show/id/1"
+Nov 29 13:37:48 symfony [info] {sfResponse} send status "HTTP/1.0 302 Found"
+Nov 29 13:37:48 symfony [info] {sfResponse} send header "Location": "http://ubuntu/swimtimes/web/frontend_dev.php/time/show/id/1"
+Nov 29 13:37:48 symfony [info] {sfResponse} send content (130 o)
+Nov 29 13:37:48 symfony [info] {sfContext} initialization
+Nov 29 13:37:48 symfony [info] {sfController} initialization
+Nov 29 13:37:48 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:37:48 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'show',  'id' => '1',)
+Nov 29 13:37:48 symfony [info] {sfController} dispatch request
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:37:48 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:37:48 symfony [info] {sfAction} call "timeActions->executeShow()"
+Nov 29 13:37:48 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:37:48 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time WHERE sw_time.ID=?
+Nov 29 13:37:48 symfony [info] {sfCreole} executeQuery(): [3.42 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time WHERE sw_time.ID=1
+Nov 29 13:37:48 symfony [info] {sfView} initialize view for "time/show"
+Nov 29 13:37:48 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/showSuccess.php"
+Nov 29 13:37:48 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:37:48 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:37:48 symfony [info] {sfFilter} render to client
+Nov 29 13:37:48 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:37:48 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:37:48 symfony [info] {sfResponse} send content (20865 o)
+Nov 29 13:37:48 symfony [info] {sfTimerManager} Configuration 2.64 ms (12)
+Nov 29 13:37:48 symfony [info] {sfTimerManager} Action "time/show" 40.41 ms (1)
+Nov 29 13:37:48 symfony [info] {sfTimerManager} Database 3.41 ms (1)
+Nov 29 13:37:48 symfony [info] {sfTimerManager} View "Success" for "time/show" 17.95 ms (1)
+Nov 29 13:37:51 symfony [info] {sfContext} initialization
+Nov 29 13:37:52 symfony [info] {sfController} initialization
+Nov 29 13:37:52 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:37:52 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:37:52 symfony [info] {sfController} dispatch request
+Nov 29 13:37:52 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:37:52 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:37:52 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:37:52 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:37:52 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:37:52 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:37:52 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:37:52 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:37:52 symfony [info] {sfCreole} executeQuery(): [2.03 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:37:52 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:37:52 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:37:52 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:37:52 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:37:52 symfony [info] {sfFilter} render to client
+Nov 29 13:37:52 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:37:52 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:37:52 symfony [info] {sfResponse} send content (20635 o)
+Nov 29 13:37:52 symfony [info] {sfTimerManager} Configuration 10.93 ms (12)
+Nov 29 13:37:52 symfony [info] {sfTimerManager} Action "time/list" 31.24 ms (1)
+Nov 29 13:37:52 symfony [info] {sfTimerManager} Database 2.02 ms (1)
+Nov 29 13:37:52 symfony [info] {sfTimerManager} View "Success" for "time/list" 12.09 ms (1)
+Nov 29 13:40:18 symfony [info] {sfContext} initialization
+Nov 29 13:40:18 symfony [info] {sfController} initialization
+Nov 29 13:40:18 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:40:18 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:40:18 symfony [info] {sfController} dispatch request
+Nov 29 13:40:18 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:40:18 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:40:18 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:40:18 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:40:18 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:40:18 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:40:18 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:40:18 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:40:18 symfony [info] {sfCreole} executeQuery(): [2.29 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:40:18 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:40:18 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:40:18 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:40:18 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:40:18 symfony [info] {sfFilter} render to client
+Nov 29 13:40:18 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:40:18 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:40:18 symfony [info] {sfResponse} send content (20665 o)
+Nov 29 13:40:18 symfony [info] {sfTimerManager} Configuration 1.86 ms (12)
+Nov 29 13:40:18 symfony [info] {sfTimerManager} Action "time/list" 33.60 ms (1)
+Nov 29 13:40:18 symfony [info] {sfTimerManager} Database 2.28 ms (1)
+Nov 29 13:40:18 symfony [info] {sfTimerManager} View "Success" for "time/list" 13.92 ms (1)
+Nov 29 13:47:27 symfony [info] {sfContext} initialization
+Nov 29 13:47:27 symfony [info] {sfController} initialization
+Nov 29 13:47:27 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:47:27 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:47:27 symfony [info] {sfController} dispatch request
+Nov 29 13:47:27 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:47:27 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:47:27 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:47:27 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:47:27 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:47:27 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:47:27 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:47:27 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:47:27 symfony [info] {sfCreole} executeQuery(): [2.42 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:47:27 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:47:27 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:47:27 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:47:27 symfony [info] {sfCreole} executeQuery(): [0.50 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:47:27 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:47:27 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:47:27 symfony [info] {sfFilter} render to client
+Nov 29 13:47:27 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:47:27 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:47:27 symfony [info] {sfResponse} send content (22018 o)
+Nov 29 13:47:27 symfony [info] {sfTimerManager} Configuration 3.15 ms (12)
+Nov 29 13:47:27 symfony [info] {sfTimerManager} Action "time/list" 34.97 ms (1)
+Nov 29 13:47:27 symfony [info] {sfTimerManager} Database 2.93 ms (2)
+Nov 29 13:47:27 symfony [info] {sfTimerManager} View "Success" for "time/list" 20.31 ms (1)
+Nov 29 13:47:51 symfony [info] {sfContext} initialization
+Nov 29 13:47:51 symfony [info] {sfController} initialization
+Nov 29 13:47:51 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:47:51 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:47:51 symfony [info] {sfController} dispatch request
+Nov 29 13:47:51 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:47:51 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:47:51 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:47:51 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:47:51 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:47:51 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:47:51 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:47:51 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:47:51 symfony [info] {sfCreole} executeQuery(): [2.22 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:47:51 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:47:51 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:47:51 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:47:51 symfony [info] {sfCreole} executeQuery(): [0.39 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:47:51 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:47:51 symfony [info] {sfCreole} executeQuery(): [0.33 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:47:51 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:47:51 symfony [info] {sfCreole} executeQuery(): [0.33 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:47:51 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:47:51 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:47:51 symfony [info] {sfFilter} render to client
+Nov 29 13:47:51 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:47:51 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:47:51 symfony [info] {sfResponse} send content (24499 o)
+Nov 29 13:47:51 symfony [info] {sfTimerManager} Configuration 5.90 ms (12)
+Nov 29 13:47:51 symfony [info] {sfTimerManager} Action "time/list" 35.52 ms (1)
+Nov 29 13:47:51 symfony [info] {sfTimerManager} Database 3.26 ms (4)
+Nov 29 13:47:51 symfony [info] {sfTimerManager} View "Success" for "time/list" 31.99 ms (1)
+Nov 29 13:54:06 symfony [info] {sfContext} initialization
+Nov 29 13:54:06 symfony [info] {sfController} initialization
+Nov 29 13:54:06 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:54:06 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'show',  'id' => '1',)
+Nov 29 13:54:06 symfony [info] {sfController} dispatch request
+Nov 29 13:54:06 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:54:06 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:54:06 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:54:06 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:54:06 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:54:06 symfony [info] {sfAction} call "swimmerActions->executeShow()"
+Nov 29 13:54:06 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:54:06 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:54:06 symfony [info] {sfCreole} executeQuery(): [2.53 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:54:06 symfony [info] {sfView} initialize view for "swimmer/show"
+Nov 29 13:54:06 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/showSuccess.php"
+Nov 29 13:54:06 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:54:06 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:54:06 symfony [info] {sfFilter} render to client
+Nov 29 13:54:06 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:54:06 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:54:06 symfony [info] {sfResponse} send content (20693 o)
+Nov 29 13:54:06 symfony [info] {sfTimerManager} Configuration 3.33 ms (12)
+Nov 29 13:54:06 symfony [info] {sfTimerManager} Action "swimmer/show" 34.29 ms (1)
+Nov 29 13:54:06 symfony [info] {sfTimerManager} Database 2.53 ms (1)
+Nov 29 13:54:06 symfony [info] {sfTimerManager} View "Success" for "swimmer/show" 13.25 ms (1)
+Nov 29 13:54:07 symfony [info] {sfContext} initialization
+Nov 29 13:54:07 symfony [info] {sfController} initialization
+Nov 29 13:54:07 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:54:07 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:54:07 symfony [info] {sfController} dispatch request
+Nov 29 13:54:07 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:54:07 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:54:07 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:54:07 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:54:07 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:54:07 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:54:07 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:54:07 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:54:07 symfony [info] {sfCreole} executeQuery(): [2.61 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:54:07 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:54:07 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:54:07 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:54:07 symfony [info] {sfCreole} executeQuery(): [0.34 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:54:07 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:54:07 symfony [info] {sfCreole} executeQuery(): [0.39 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:54:07 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:54:07 symfony [info] {sfCreole} executeQuery(): [0.31 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:54:07 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:54:07 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:54:07 symfony [info] {sfFilter} render to client
+Nov 29 13:54:07 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:54:07 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:54:07 symfony [info] {sfResponse} send content (24467 o)
+Nov 29 13:54:08 symfony [info] {sfTimerManager} Configuration 8.42 ms (12)
+Nov 29 13:54:08 symfony [info] {sfTimerManager} Action "time/list" 34.45 ms (1)
+Nov 29 13:54:08 symfony [info] {sfTimerManager} Database 3.65 ms (4)
+Nov 29 13:54:08 symfony [info] {sfTimerManager} View "Success" for "time/list" 39.20 ms (1)
+Nov 29 13:54:57 symfony [info] {sfContext} initialization
+Nov 29 13:54:57 symfony [info] {sfController} initialization
+Nov 29 13:54:57 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:54:57 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:54:57 symfony [info] {sfController} dispatch request
+Nov 29 13:54:57 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:54:57 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:54:57 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:54:57 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:54:57 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:54:57 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:54:57 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:54:57 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:54:57 symfony [info] {sfCreole} executeQuery(): [2.23 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:54:57 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:54:57 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:54:57 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:54:57 symfony [info] {sfCreole} executeQuery(): [0.36 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:54:57 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:54:57 symfony [info] {sfCreole} executeQuery(): [0.36 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:54:57 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:54:57 symfony [info] {sfCreole} executeQuery(): [0.31 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:54:57 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:54:57 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:54:57 symfony [info] {sfFilter} render to client
+Nov 29 13:54:57 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:54:57 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:54:57 symfony [info] {sfResponse} send content (24622 o)
+Nov 29 13:54:57 symfony [info] {sfTimerManager} Configuration 1.99 ms (12)
+Nov 29 13:54:57 symfony [info] {sfTimerManager} Action "time/list" 33.22 ms (1)
+Nov 29 13:54:57 symfony [info] {sfTimerManager} Database 3.26 ms (4)
+Nov 29 13:54:57 symfony [info] {sfTimerManager} View "Success" for "time/list" 32.67 ms (1)
+Nov 29 13:54:59 symfony [info] {sfContext} initialization
+Nov 29 13:54:59 symfony [info] {sfController} initialization
+Nov 29 13:54:59 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:54:59 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'show',  'id' => '1',)
+Nov 29 13:54:59 symfony [info] {sfController} dispatch request
+Nov 29 13:54:59 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:54:59 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:54:59 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:54:59 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:54:59 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:54:59 symfony [info] {sfAction} call "eventActions->executeShow()"
+Nov 29 13:54:59 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:54:59 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:54:59 symfony [info] {sfCreole} executeQuery(): [2.19 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:54:59 symfony [info] {sfView} initialize view for "event/show"
+Nov 29 13:54:59 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/event/templates/showSuccess.php"
+Nov 29 13:54:59 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:54:59 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:54:59 symfony [info] {sfFilter} render to client
+Nov 29 13:54:59 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:54:59 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:54:59 symfony [info] {sfResponse} send content (20547 o)
+Nov 29 13:55:00 symfony [info] {sfTimerManager} Configuration 8.63 ms (12)
+Nov 29 13:55:00 symfony [info] {sfTimerManager} Action "event/show" 79.00 ms (1)
+Nov 29 13:55:00 symfony [info] {sfTimerManager} Database 2.19 ms (1)
+Nov 29 13:55:00 symfony [info] {sfTimerManager} View "Success" for "event/show" 32.26 ms (1)
+Nov 29 13:55:01 symfony [info] {sfContext} initialization
+Nov 29 13:55:01 symfony [info] {sfController} initialization
+Nov 29 13:55:01 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:55:01 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:55:01 symfony [info] {sfController} dispatch request
+Nov 29 13:55:01 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:55:01 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:55:01 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:55:01 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:55:01 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:55:01 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:55:01 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:55:01 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:55:01 symfony [info] {sfCreole} executeQuery(): [2.07 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:55:01 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:55:01 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:55:01 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:55:01 symfony [info] {sfCreole} executeQuery(): [0.36 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:55:01 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:55:01 symfony [info] {sfCreole} executeQuery(): [1.10 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:55:02 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:55:02 symfony [info] {sfCreole} executeQuery(): [0.30 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:55:02 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:55:02 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:55:02 symfony [info] {sfFilter} render to client
+Nov 29 13:55:02 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:55:02 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:55:02 symfony [info] {sfResponse} send content (24589 o)
+Nov 29 13:55:02 symfony [info] {sfTimerManager} Configuration 2.01 ms (12)
+Nov 29 13:55:02 symfony [info] {sfTimerManager} Action "time/list" 32.79 ms (1)
+Nov 29 13:55:02 symfony [info] {sfTimerManager} Database 3.82 ms (4)
+Nov 29 13:55:02 symfony [info] {sfTimerManager} View "Success" for "time/list" 40.50 ms (1)
+Nov 29 13:55:03 symfony [info] {sfContext} initialization
+Nov 29 13:55:03 symfony [info] {sfController} initialization
+Nov 29 13:55:03 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:55:03 symfony [info] {sfRequest} request parameters array (  'module' => 'meet',  'action' => 'show',  'id' => '1',)
+Nov 29 13:55:03 symfony [info] {sfController} dispatch request
+Nov 29 13:55:03 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:55:03 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:55:03 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:55:03 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:55:03 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:55:03 symfony [info] {sfAction} call "meetActions->executeShow()"
+Nov 29 13:55:03 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:55:03 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:55:03 symfony [info] {sfCreole} executeQuery(): [2.58 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:55:03 symfony [info] {sfView} initialize view for "meet/show"
+Nov 29 13:55:03 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/meet/templates/showSuccess.php"
+Nov 29 13:55:03 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:55:03 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:55:03 symfony [info] {sfFilter} render to client
+Nov 29 13:55:03 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:55:03 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:55:03 symfony [info] {sfResponse} send content (20665 o)
+Nov 29 13:55:03 symfony [info] {sfTimerManager} Configuration 2.70 ms (12)
+Nov 29 13:55:03 symfony [info] {sfTimerManager} Action "meet/show" 30.31 ms (1)
+Nov 29 13:55:03 symfony [info] {sfTimerManager} Database 2.57 ms (1)
+Nov 29 13:55:03 symfony [info] {sfTimerManager} View "Success" for "meet/show" 13.54 ms (1)
+Nov 29 13:55:04 symfony [info] {sfContext} initialization
+Nov 29 13:55:04 symfony [info] {sfController} initialization
+Nov 29 13:55:04 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:55:04 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:55:04 symfony [info] {sfController} dispatch request
+Nov 29 13:55:04 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:55:04 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:55:04 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:55:04 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:55:04 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:55:04 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:55:04 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:55:04 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:55:04 symfony [info] {sfCreole} executeQuery(): [9.88 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:55:04 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:55:04 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:55:04 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:55:04 symfony [info] {sfCreole} executeQuery(): [0.76 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:55:04 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:55:04 symfony [info] {sfCreole} executeQuery(): [0.71 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:55:04 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:55:04 symfony [info] {sfCreole} executeQuery(): [0.82 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:55:04 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:55:04 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:55:05 symfony [info] {sfFilter} render to client
+Nov 29 13:55:05 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:55:05 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:55:05 symfony [info] {sfResponse} send content (24591 o)
+Nov 29 13:55:05 symfony [info] {sfTimerManager} Configuration 2.97 ms (12)
+Nov 29 13:55:05 symfony [info] {sfTimerManager} Action "time/list" 114.74 ms (1)
+Nov 29 13:55:05 symfony [info] {sfTimerManager} Database 12.17 ms (4)
+Nov 29 13:55:05 symfony [info] {sfTimerManager} View "Success" for "time/list" 69.85 ms (1)
+Nov 29 13:55:19 symfony [info] {sfContext} initialization
+Nov 29 13:55:19 symfony [info] {sfController} initialization
+Nov 29 13:55:19 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:55:19 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'show',  'id' => '1',)
+Nov 29 13:55:19 symfony [info] {sfController} dispatch request
+Nov 29 13:55:19 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:55:19 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:55:19 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:55:19 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:55:19 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:55:19 symfony [info] {sfAction} call "swimmerActions->executeShow()"
+Nov 29 13:55:19 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:55:19 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:55:19 symfony [info] {sfCreole} executeQuery(): [2.76 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:55:19 symfony [info] {sfView} initialize view for "swimmer/show"
+Nov 29 13:55:19 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/showSuccess.php"
+Nov 29 13:55:19 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:55:19 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:55:19 symfony [info] {sfFilter} render to client
+Nov 29 13:55:19 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:55:19 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:55:19 symfony [info] {sfResponse} send content (20694 o)
+Nov 29 13:55:19 symfony [info] {sfTimerManager} Configuration 18.94 ms (12)
+Nov 29 13:55:19 symfony [info] {sfTimerManager} Action "swimmer/show" 33.80 ms (1)
+Nov 29 13:55:19 symfony [info] {sfTimerManager} Database 2.76 ms (1)
+Nov 29 13:55:19 symfony [info] {sfTimerManager} View "Success" for "swimmer/show" 11.57 ms (1)
+Nov 29 13:56:15 symfony [info] {sfContext} initialization
+Nov 29 13:56:15 symfony [info] {sfController} initialization
+Nov 29 13:56:15 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:56:15 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:56:15 symfony [info] {sfController} dispatch request
+Nov 29 13:56:15 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:56:15 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:56:15 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:56:15 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:56:15 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:56:15 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:56:15 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:56:15 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:56:15 symfony [info] {sfCreole} executeQuery(): [3.80 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:56:15 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:56:15 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:56:15 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:56:15 symfony [info] {sfCreole} executeQuery(): [0.39 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:56:15 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:56:15 symfony [info] {sfCreole} executeQuery(): [0.31 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:56:15 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:56:15 symfony [info] {sfCreole} executeQuery(): [0.31 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:56:15 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:15 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:15 symfony [info] {sfFilter} render to client
+Nov 29 13:56:15 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:56:15 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:56:15 symfony [info] {sfResponse} send content (24590 o)
+Nov 29 13:56:15 symfony [info] {sfTimerManager} Configuration 2.44 ms (12)
+Nov 29 13:56:15 symfony [info] {sfTimerManager} Action "time/list" 36.05 ms (1)
+Nov 29 13:56:15 symfony [info] {sfTimerManager} Database 4.81 ms (4)
+Nov 29 13:56:15 symfony [info] {sfTimerManager} View "Success" for "time/list" 31.75 ms (1)
+Nov 29 13:56:17 symfony [info] {sfContext} initialization
+Nov 29 13:56:17 symfony [info] {sfController} initialization
+Nov 29 13:56:17 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:56:17 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'show',  'id' => '1',)
+Nov 29 13:56:17 symfony [info] {sfController} dispatch request
+Nov 29 13:56:17 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:56:17 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:56:17 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:56:17 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:56:17 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:56:17 symfony [info] {sfAction} call "swimmerActions->executeShow()"
+Nov 29 13:56:17 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:56:17 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:56:17 symfony [info] {sfCreole} executeQuery(): [2.42 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:56:17 symfony [info] {sfView} initialize view for "swimmer/show"
+Nov 29 13:56:17 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/swimmer/templates/showSuccess.php"
+Nov 29 13:56:17 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=?
+Nov 29 13:56:17 symfony [info] {sfCreole} executeQuery(): [0.36 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=1
+Nov 29 13:56:17 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:17 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:17 symfony [info] {sfFilter} render to client
+Nov 29 13:56:17 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:56:17 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:56:17 symfony [info] {sfResponse} send content (21889 o)
+Nov 29 13:56:17 symfony [info] {sfTimerManager} Configuration 3.02 ms (12)
+Nov 29 13:56:17 symfony [info] {sfTimerManager} Action "swimmer/show" 34.44 ms (1)
+Nov 29 13:56:17 symfony [info] {sfTimerManager} Database 2.75 ms (2)
+Nov 29 13:56:17 symfony [info] {sfTimerManager} View "Success" for "swimmer/show" 21.18 ms (1)
+Nov 29 13:56:19 symfony [info] {sfContext} initialization
+Nov 29 13:56:19 symfony [info] {sfController} initialization
+Nov 29 13:56:19 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:56:19 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:56:19 symfony [info] {sfController} dispatch request
+Nov 29 13:56:19 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:56:19 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:56:19 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:56:19 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:56:19 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:56:19 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:56:19 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:56:19 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:56:19 symfony [info] {sfCreole} executeQuery(): [2.05 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:56:19 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:56:19 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:56:19 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:56:19 symfony [info] {sfCreole} executeQuery(): [0.36 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:56:19 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:56:19 symfony [info] {sfCreole} executeQuery(): [0.41 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:56:19 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:56:19 symfony [info] {sfCreole} executeQuery(): [0.31 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:56:19 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:19 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:19 symfony [info] {sfFilter} render to client
+Nov 29 13:56:19 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:56:19 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:56:19 symfony [info] {sfResponse} send content (24590 o)
+Nov 29 13:56:19 symfony [info] {sfTimerManager} Configuration 5.17 ms (12)
+Nov 29 13:56:19 symfony [info] {sfTimerManager} Action "time/list" 32.86 ms (1)
+Nov 29 13:56:19 symfony [info] {sfTimerManager} Database 3.12 ms (4)
+Nov 29 13:56:19 symfony [info] {sfTimerManager} View "Success" for "time/list" 35.33 ms (1)
+Nov 29 13:56:20 symfony [info] {sfContext} initialization
+Nov 29 13:56:20 symfony [info] {sfController} initialization
+Nov 29 13:56:20 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:56:20 symfony [info] {sfRequest} request parameters array (  'module' => 'meet',  'action' => 'show',  'id' => '1',)
+Nov 29 13:56:20 symfony [info] {sfController} dispatch request
+Nov 29 13:56:20 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:56:20 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:56:20 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:56:20 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:56:20 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:56:20 symfony [info] {sfAction} call "meetActions->executeShow()"
+Nov 29 13:56:20 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:56:20 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:56:20 symfony [info] {sfCreole} executeQuery(): [2.28 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:56:20 symfony [info] {sfView} initialize view for "meet/show"
+Nov 29 13:56:20 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/meet/templates/showSuccess.php"
+Nov 29 13:56:20 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:20 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:20 symfony [info] {sfFilter} render to client
+Nov 29 13:56:20 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:56:20 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:56:20 symfony [info] {sfResponse} send content (20665 o)
+Nov 29 13:56:20 symfony [info] {sfTimerManager} Configuration 2.96 ms (12)
+Nov 29 13:56:20 symfony [info] {sfTimerManager} Action "meet/show" 28.01 ms (1)
+Nov 29 13:56:20 symfony [info] {sfTimerManager} Database 2.28 ms (1)
+Nov 29 13:56:20 symfony [info] {sfTimerManager} View "Success" for "meet/show" 22.74 ms (1)
+Nov 29 13:56:22 symfony [info] {sfContext} initialization
+Nov 29 13:56:22 symfony [info] {sfController} initialization
+Nov 29 13:56:22 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:56:22 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:56:22 symfony [info] {sfController} dispatch request
+Nov 29 13:56:22 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:56:22 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:56:22 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:56:22 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:56:22 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:56:22 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:56:22 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:56:22 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:56:22 symfony [info] {sfCreole} executeQuery(): [6.41 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:56:22 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:56:22 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:56:22 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:56:22 symfony [info] {sfCreole} executeQuery(): [0.39 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:56:22 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:56:22 symfony [info] {sfCreole} executeQuery(): [0.43 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:56:22 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:56:22 symfony [info] {sfCreole} executeQuery(): [0.32 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:56:22 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:22 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:22 symfony [info] {sfFilter} render to client
+Nov 29 13:56:22 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:56:22 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:56:22 symfony [info] {sfResponse} send content (24590 o)
+Nov 29 13:56:22 symfony [info] {sfTimerManager} Configuration 7.53 ms (12)
+Nov 29 13:56:22 symfony [info] {sfTimerManager} Action "time/list" 35.82 ms (1)
+Nov 29 13:56:22 symfony [info] {sfTimerManager} Database 7.54 ms (4)
+Nov 29 13:56:22 symfony [info] {sfTimerManager} View "Success" for "time/list" 42.61 ms (1)
+Nov 29 13:56:23 symfony [info] {sfContext} initialization
+Nov 29 13:56:23 symfony [info] {sfController} initialization
+Nov 29 13:56:23 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:56:23 symfony [info] {sfRequest} request parameters array (  'module' => 'event',  'action' => 'show',  'id' => '1',)
+Nov 29 13:56:23 symfony [info] {sfController} dispatch request
+Nov 29 13:56:23 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:56:23 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:56:23 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:56:23 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:56:23 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:56:23 symfony [info] {sfAction} call "eventActions->executeShow()"
+Nov 29 13:56:23 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:56:23 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:56:23 symfony [info] {sfCreole} executeQuery(): [2.41 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:56:23 symfony [info] {sfView} initialize view for "event/show"
+Nov 29 13:56:23 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/event/templates/showSuccess.php"
+Nov 29 13:56:23 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:23 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:23 symfony [info] {sfFilter} render to client
+Nov 29 13:56:23 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:56:23 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:56:23 symfony [info] {sfResponse} send content (20548 o)
+Nov 29 13:56:23 symfony [info] {sfTimerManager} Configuration 3.12 ms (12)
+Nov 29 13:56:23 symfony [info] {sfTimerManager} Action "event/show" 29.99 ms (1)
+Nov 29 13:56:23 symfony [info] {sfTimerManager} Database 2.41 ms (1)
+Nov 29 13:56:23 symfony [info] {sfTimerManager} View "Success" for "event/show" 12.91 ms (1)
+Nov 29 13:56:25 symfony [info] {sfContext} initialization
+Nov 29 13:56:26 symfony [info] {sfController} initialization
+Nov 29 13:56:26 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Nov 29 13:56:26 symfony [info] {sfRequest} request parameters array (  'module' => 'time',  'action' => 'list',)
+Nov 29 13:56:26 symfony [info] {sfController} dispatch request
+Nov 29 13:56:26 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Nov 29 13:56:26 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Nov 29 13:56:26 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Nov 29 13:56:26 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Nov 29 13:56:26 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Nov 29 13:56:26 symfony [info] {sfAction} call "timeActions->executeList()"
+Nov 29 13:56:26 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Nov 29 13:56:26 symfony [info] {sfCreole} prepareStatement(): SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:56:26 symfony [info] {sfCreole} executeQuery(): [2.12 ms] SELECT sw_time.ID, sw_time.SWIMMER_ID, sw_time.MEET_ID, sw_time.EVENT_ID, sw_time.TIME, sw_time.PLACE, sw_time.LANE FROM sw_time
+Nov 29 13:56:26 symfony [info] {sfView} initialize view for "time/list"
+Nov 29 13:56:26 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/modules/time/templates/listSuccess.php"
+Nov 29 13:56:26 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Nov 29 13:56:26 symfony [info] {sfCreole} executeQuery(): [0.36 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Nov 29 13:56:26 symfony [info] {sfCreole} prepareStatement(): SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=?
+Nov 29 13:56:26 symfony [info] {sfCreole} executeQuery(): [0.41 ms] SELECT sw_meet.ID, sw_meet.NAME, sw_meet.STARTDATE, sw_meet.ENDDATE FROM sw_meet WHERE sw_meet.ID=1
+Nov 29 13:56:26 symfony [info] {sfCreole} prepareStatement(): SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=?
+Nov 29 13:56:26 symfony [info] {sfCreole} executeQuery(): [0.31 ms] SELECT sw_event.ID, sw_event.NAME, sw_event.DISTANCE FROM sw_event WHERE sw_event.ID=1
+Nov 29 13:56:26 symfony [info] {sfView} decorate content with "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:26 symfony [info] {sfView} render "/var/www/swimtimes/apps/frontend/templates/layout.php"
+Nov 29 13:56:26 symfony [info] {sfFilter} render to client
+Nov 29 13:56:26 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Nov 29 13:56:26 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Nov 29 13:56:26 symfony [info] {sfResponse} send content (24590 o)
+Nov 29 13:56:26 symfony [info] {sfTimerManager} Configuration 1.92 ms (12)
+Nov 29 13:56:26 symfony [info] {sfTimerManager} Action "time/list" 30.74 ms (1)
+Nov 29 13:56:26 symfony [info] {sfTimerManager} Database 3.20 ms (4)
+Nov 29 13:56:26 symfony [info] {sfTimerManager} View "Success" for "time/list" 36.10 ms (1)
+Dec 16 12:44:13 symfony [info] {sfRouting} connect "/"
+Dec 16 12:44:13 symfony [info] {sfRouting} connect "/symfony/:action/*"
+Dec 16 12:44:13 symfony [info] {sfRouting} connect "/:module"
+Dec 16 12:44:13 symfony [info] {sfRouting} connect "/:module/:action/*"
+Dec 16 12:44:13 symfony [info] {sfContext} initialization
+Dec 16 12:44:14 symfony [info] {sfController} initialization
+Dec 16 12:44:14 symfony [info] {sfRouting} match route [homepage] "/"
+Dec 16 12:44:14 symfony [info] {sfRequest} request parameters array (  'module' => 'default',  'action' => 'index',)
+Dec 16 12:44:14 symfony [info] {sfController} dispatch request
+Dec 16 12:44:14 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Dec 16 12:44:14 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Dec 16 12:44:14 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Dec 16 12:44:14 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Dec 16 12:44:14 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Dec 16 12:44:14 symfony [info] {sfAction} change layout to "/home/.wakanda/yellowb1/mapki.com/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout"
+Dec 16 12:44:14 symfony [info] {sfAction} call "defaultActions->executeIndex()"
+Dec 16 12:44:14 symfony [info] {sfView} initialize view for "default/index"
+Dec 16 12:44:14 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/config/../data/symfony/modules/default/templates/indexSuccess.php"
+Dec 16 12:44:14 symfony [info] {sfView} decorate content with "/home/.wakanda/yellowb1/mapki.com/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Dec 16 12:44:14 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Dec 16 12:44:14 symfony [info] {sfFilter} render to client
+Dec 16 12:44:14 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Dec 16 12:44:14 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Dec 16 12:44:14 symfony [info] {sfResponse} send content (22747 o)
+Dec 16 12:44:14 symfony [info] {sfTimerManager} Configuration 163.64 ms (11)
+Dec 16 12:44:14 symfony [info] {sfTimerManager} Action "default/index" 1.29 ms (1)
+Dec 16 12:44:14 symfony [info] {sfTimerManager} View "Success" for "default/index" 49.47 ms (1)
+Dec 16 12:48:11 symfony [info] {sfContext} initialization
+Dec 16 12:48:12 symfony [info] {sfController} initialization
+Dec 16 12:48:12 symfony [info] {sfRequest} request parameters array (  'module' => 'default',  'action' => 'error404',)
+Dec 16 12:48:12 symfony [info] {sfController} dispatch request
+Dec 16 12:48:12 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Dec 16 12:48:12 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Dec 16 12:48:12 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Dec 16 12:48:12 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Dec 16 12:48:12 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Dec 16 12:48:12 symfony [info] {sfAction} change layout to "/home/.wakanda/yellowb1/mapki.com/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout"
+Dec 16 12:48:12 symfony [info] {sfAction} call "defaultActions->executeError404()"
+Dec 16 12:48:12 symfony [info] {sfView} initialize view for "default/error404"
+Dec 16 12:48:12 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/config/../data/symfony/modules/default/templates/error404Success.php"
+Dec 16 12:48:12 symfony [info] {sfView} decorate content with "/home/.wakanda/yellowb1/mapki.com/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Dec 16 12:48:12 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/config/../data/symfony/modules/default/templates/defaultLayout.php"
+Dec 16 12:48:12 symfony [info] {sfFilter} render to client
+Dec 16 12:48:12 symfony [info] {sfResponse} send status "HTTP/1.0 404 Not Found"
+Dec 16 12:48:12 symfony [info] {sfResponse} send header "Status": "404 Not Found"
+Dec 16 12:48:12 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Dec 16 12:48:12 symfony [info] {sfResponse} send content (21399 o)
+Dec 16 12:48:12 symfony [info] {sfTimerManager} Configuration 92.40 ms (12)
+Dec 16 12:48:12 symfony [info] {sfTimerManager} Action "default/error404" 6.99 ms (1)
+Dec 16 12:48:12 symfony [info] {sfTimerManager} View "Success" for "default/error404" 75.84 ms (1)
+Dec 16 12:48:27 symfony [info] {sfContext} initialization
+Dec 16 12:48:27 symfony [info] {sfController} initialization
+Dec 16 12:48:27 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Dec 16 12:48:27 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'list',)
+Dec 16 12:48:27 symfony [info] {sfController} dispatch request
+Dec 16 12:48:27 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Dec 16 12:48:27 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Dec 16 12:48:27 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Dec 16 12:48:27 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Dec 16 12:48:27 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Dec 16 12:48:27 symfony [info] {sfAction} call "swimmerActions->executeList()"
+Dec 16 12:48:28 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 16 12:48:28 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Dec 16 12:48:28 symfony [info] {sfCreole} executeQuery(): [7.88 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Dec 16 12:48:28 symfony [info] {sfView} initialize view for "swimmer/list"
+Dec 16 12:48:28 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/modules/swimmer/templates/listSuccess.php"
+Dec 16 12:48:28 symfony [info] {sfView} decorate content with "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:28 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:28 symfony [info] {sfFilter} render to client
+Dec 16 12:48:28 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Dec 16 12:48:28 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Dec 16 12:48:28 symfony [info] {sfResponse} send content (22098 o)
+Dec 16 12:48:28 symfony [info] {sfTimerManager} Configuration 104.01 ms (13)
+Dec 16 12:48:28 symfony [info] {sfTimerManager} Action "swimmer/list" 281.11 ms (1)
+Dec 16 12:48:28 symfony [info] {sfTimerManager} Database 7.88 ms (1)
+Dec 16 12:48:28 symfony [info] {sfTimerManager} View "Success" for "swimmer/list" 64.00 ms (1)
+Dec 16 12:48:32 symfony [info] {sfContext} initialization
+Dec 16 12:48:32 symfony [info] {sfController} initialization
+Dec 16 12:48:32 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Dec 16 12:48:32 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'show',  'id' => '2',)
+Dec 16 12:48:32 symfony [info] {sfController} dispatch request
+Dec 16 12:48:32 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Dec 16 12:48:32 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Dec 16 12:48:32 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Dec 16 12:48:32 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Dec 16 12:48:32 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Dec 16 12:48:32 symfony [info] {sfAction} call "swimmerActions->executeShow()"
+Dec 16 12:48:32 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 16 12:48:32 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Dec 16 12:48:32 symfony [info] {sfCreole} executeQuery(): [5.67 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=2
+Dec 16 12:48:32 symfony [info] {sfView} initialize view for "swimmer/show"
+Dec 16 12:48:32 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/modules/swimmer/templates/showSuccess.php"
+Dec 16 12:48:32 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=?
+Dec 16 12:48:32 symfony [info] {sfCreole} executeQuery(): [3.05 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=2
+Dec 16 12:48:32 symfony [info] {sfView} decorate content with "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:32 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:32 symfony [info] {sfFilter} render to client
+Dec 16 12:48:32 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Dec 16 12:48:32 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Dec 16 12:48:32 symfony [info] {sfResponse} send content (23476 o)
+Dec 16 12:48:32 symfony [info] {sfTimerManager} Configuration 19.94 ms (12)
+Dec 16 12:48:32 symfony [info] {sfTimerManager} Action "swimmer/show" 81.84 ms (1)
+Dec 16 12:48:32 symfony [info] {sfTimerManager} Database 8.72 ms (2)
+Dec 16 12:48:32 symfony [info] {sfTimerManager} View "Success" for "swimmer/show" 59.80 ms (1)
+Dec 16 12:48:35 symfony [info] {sfContext} initialization
+Dec 16 12:48:35 symfony [info] {sfController} initialization
+Dec 16 12:48:35 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Dec 16 12:48:35 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'list',)
+Dec 16 12:48:35 symfony [info] {sfController} dispatch request
+Dec 16 12:48:35 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Dec 16 12:48:35 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Dec 16 12:48:35 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Dec 16 12:48:35 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Dec 16 12:48:35 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Dec 16 12:48:35 symfony [info] {sfAction} call "swimmerActions->executeList()"
+Dec 16 12:48:35 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 16 12:48:35 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Dec 16 12:48:35 symfony [info] {sfCreole} executeQuery(): [5.49 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Dec 16 12:48:35 symfony [info] {sfView} initialize view for "swimmer/list"
+Dec 16 12:48:35 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/modules/swimmer/templates/listSuccess.php"
+Dec 16 12:48:35 symfony [info] {sfView} decorate content with "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:35 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:35 symfony [info] {sfFilter} render to client
+Dec 16 12:48:35 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Dec 16 12:48:35 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Dec 16 12:48:35 symfony [info] {sfResponse} send content (22096 o)
+Dec 16 12:48:35 symfony [info] {sfTimerManager} Configuration 8.93 ms (12)
+Dec 16 12:48:35 symfony [info] {sfTimerManager} Action "swimmer/list" 103.74 ms (1)
+Dec 16 12:48:35 symfony [info] {sfTimerManager} Database 5.48 ms (1)
+Dec 16 12:48:35 symfony [info] {sfTimerManager} View "Success" for "swimmer/list" 24.56 ms (1)
+Dec 16 12:48:38 symfony [info] {sfContext} initialization
+Dec 16 12:48:38 symfony [info] {sfController} initialization
+Dec 16 12:48:38 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Dec 16 12:48:38 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'show',  'id' => '1',)
+Dec 16 12:48:38 symfony [info] {sfController} dispatch request
+Dec 16 12:48:38 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Dec 16 12:48:38 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Dec 16 12:48:38 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Dec 16 12:48:38 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Dec 16 12:48:38 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Dec 16 12:48:38 symfony [info] {sfAction} call "swimmerActions->executeShow()"
+Dec 16 12:48:38 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 16 12:48:38 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=?
+Dec 16 12:48:38 symfony [info] {sfCreole} executeQuery(): [7.81 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer WHERE sw_swimmer.ID=1
+Dec 16 12:48:38 symfony [info] {sfView} initialize view for "swimmer/show"
+Dec 16 12:48:38 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/modules/swimmer/templates/showSuccess.php"
+Dec 16 12:48:39 symfony [info] {sfCreole} prepareStatement(): SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=?
+Dec 16 12:48:39 symfony [info] {sfCreole} executeQuery(): [2.79 ms] SELECT sw_team.ID, sw_team.NAME, sw_team.SHORTNAME FROM sw_team WHERE sw_team.ID=1
+Dec 16 12:48:39 symfony [info] {sfView} decorate content with "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:39 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:39 symfony [info] {sfFilter} render to client
+Dec 16 12:48:39 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Dec 16 12:48:39 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Dec 16 12:48:39 symfony [info] {sfResponse} send content (23471 o)
+Dec 16 12:48:39 symfony [info] {sfTimerManager} Configuration 41.41 ms (12)
+Dec 16 12:48:39 symfony [info] {sfTimerManager} Action "swimmer/show" 64.82 ms (1)
+Dec 16 12:48:39 symfony [info] {sfTimerManager} Database 10.59 ms (2)
+Dec 16 12:48:39 symfony [info] {sfTimerManager} View "Success" for "swimmer/show" 62.47 ms (1)
+Dec 16 12:48:41 symfony [info] {sfContext} initialization
+Dec 16 12:48:41 symfony [info] {sfController} initialization
+Dec 16 12:48:41 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Dec 16 12:48:41 symfony [info] {sfRequest} request parameters array (  'module' => 'swimmer',  'action' => 'list',)
+Dec 16 12:48:41 symfony [info] {sfController} dispatch request
+Dec 16 12:48:41 symfony [info] {sfFilter} executing filter "sfRenderingFilter"
+Dec 16 12:48:41 symfony [info] {sfFilter} executing filter "sfWebDebugFilter"
+Dec 16 12:48:41 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Dec 16 12:48:41 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Dec 16 12:48:41 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Dec 16 12:48:41 symfony [info] {sfAction} call "swimmerActions->executeList()"
+Dec 16 12:48:41 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 16 12:48:41 symfony [info] {sfCreole} prepareStatement(): SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Dec 16 12:48:41 symfony [info] {sfCreole} executeQuery(): [5.89 ms] SELECT sw_swimmer.ID, sw_swimmer.NAME, sw_swimmer.YEAR, sw_swimmer.TEAM_ID FROM sw_swimmer
+Dec 16 12:48:41 symfony [info] {sfView} initialize view for "swimmer/list"
+Dec 16 12:48:41 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/modules/swimmer/templates/listSuccess.php"
+Dec 16 12:48:41 symfony [info] {sfView} decorate content with "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:41 symfony [info] {sfView} render "/home/.wakanda/yellowb1/mapki.com/swimtimes/apps/frontend/templates/layout.php"
+Dec 16 12:48:41 symfony [info] {sfFilter} render to client
+Dec 16 12:48:41 symfony [info] {sfResponse} send status "HTTP/1.0 200 OK"
+Dec 16 12:48:41 symfony [info] {sfResponse} send header "Content-Type": "text/html; charset=utf-8"
+Dec 16 12:48:41 symfony [info] {sfResponse} send content (22188 o)
+Dec 16 12:48:41 symfony [info] {sfTimerManager} Configuration 14.09 ms (12)
+Dec 16 12:48:41 symfony [info] {sfTimerManager} Action "swimmer/list" 177.62 ms (1)
+Dec 16 12:48:41 symfony [info] {sfTimerManager} Database 5.88 ms (1)
+Dec 16 12:48:41 symfony [info] {sfTimerManager} View "Success" for "swimmer/list" 28.80 ms (1)
