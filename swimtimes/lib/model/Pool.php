@@ -9,4 +9,7 @@
  */ 
 class Pool extends BasePool
 {
+  public function __toString() {
+    return $this->getName();
+  }
 }

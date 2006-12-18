@@ -38,7 +38,7 @@ class SplitMapBuilder {
 
 		$tMap->addColumn('NUMBER', 'Number', 'int', CreoleTypes::INTEGER, false);
 
-		$tMap->addColumn('TIME', 'Time', 'double', CreoleTypes::DOUBLE, false);
+		$tMap->addColumn('DURATION', 'Duration', 'double', CreoleTypes::DOUBLE, false);
 				
     } 
 } 

@@ -13,7 +13,7 @@ abstract class BaseEventPeer {
 	const CLASS_DEFAULT = 'lib.model.Event';
 
 	
-	const NUM_COLUMNS = 3;
+	const NUM_COLUMNS = 4;
 
 	
 	const NUM_LAZY_LOAD_COLUMNS = 0;
@@ -29,23 +29,26 @@ abstract class BaseEventPeer {
 	const DISTANCE = 'sw_event.DISTANCE';
 
 	
+	const SPLITAT = 'sw_event.SPLITAT';
+
+	
 	private static $phpNameMap = null;
 
 
 	
 	private static $fieldNames = array (
-		BasePeer::TYPE_PHPNAME => array ('Id', 'Name', 'Distance', ),
-		BasePeer::TYPE_COLNAME => array (EventPeer::ID, EventPeer::NAME, EventPeer::DISTANCE, ),
-		BasePeer::TYPE_FIELDNAME => array ('id', 'name', 'distance', ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, )
+		BasePeer::TYPE_PHPNAME => array ('Id', 'Name', 'Distance', 'Splitat', ),
+		BasePeer::TYPE_COLNAME => array (EventPeer::ID, EventPeer::NAME, EventPeer::DISTANCE, EventPeer::SPLITAT, ),
+		BasePeer::TYPE_FIELDNAME => array ('id', 'name', 'distance', 'splitAt', ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
 	);
 
 	
 	private static $fieldKeys = array (
-		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'Name' => 1, 'Distance' => 2, ),
-		BasePeer::TYPE_COLNAME => array (EventPeer::ID => 0, EventPeer::NAME => 1, EventPeer::DISTANCE => 2, ),
-		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'name' => 1, 'distance' => 2, ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, )
+		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'Name' => 1, 'Distance' => 2, 'Splitat' => 3, ),
+		BasePeer::TYPE_COLNAME => array (EventPeer::ID => 0, EventPeer::NAME => 1, EventPeer::DISTANCE => 2, EventPeer::SPLITAT => 3, ),
+		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'name' => 1, 'distance' => 2, 'splitAt' => 3, ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
 	);
 
 	
@@ -104,6 +107,8 @@ abstract class BaseEventPeer {
 		$criteria->addSelectColumn(EventPeer::NAME);
 
 		$criteria->addSelectColumn(EventPeer::DISTANCE);
+
+		$criteria->addSelectColumn(EventPeer::SPLITAT);
 
 	}
 

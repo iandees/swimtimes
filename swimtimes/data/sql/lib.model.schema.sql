@@ -29,8 +29,12 @@ CREATE TABLE [sw_meet]
 	[id] INTEGER  NOT NULL PRIMARY KEY,
 	[name] VARCHAR(255),
 	[startdate] TIMESTAMP,
-	[enddate] TIMESTAMP
+	[enddate] TIMESTAMP,
+	[pool_id] INTEGER
 );
+
+-- SQLite does not support foreign keys; this is just for reference
+-- FOREIGN KEY ([pool_id]) REFERENCES sw_pool ([id])
 
 -----------------------------------------------------------------------------
 -- sw_time
@@ -47,6 +51,7 @@ CREATE TABLE [sw_time]
 	[event_id] INTEGER,
 	[time] DOUBLE,
 	[place] INTEGER,
+	[points] INTEGER,
 	[lane] INTEGER
 );
 
@@ -71,7 +76,7 @@ CREATE TABLE [sw_split]
 	[id] INTEGER  NOT NULL PRIMARY KEY,
 	[time_id] INTEGER,
 	[number] INTEGER,
-	[time] DOUBLE
+	[duration] DOUBLE
 );
 
 -- SQLite does not support foreign keys; this is just for reference
@@ -117,5 +122,6 @@ CREATE TABLE [sw_event]
 (
 	[id] INTEGER  NOT NULL PRIMARY KEY,
 	[name] VARCHAR(255),
-	[distance] INTEGER
+	[distance] INTEGER,
+	[splitAt] INTEGER
 );

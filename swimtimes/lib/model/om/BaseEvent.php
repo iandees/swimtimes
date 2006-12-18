@@ -22,6 +22,10 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 	
 	protected $distance;
 
+
+	
+	protected $splitat;
+
 	
 	protected $collTimes;
 
@@ -56,6 +60,13 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 	}
 
 	
+	public function getSplitat()
+	{
+
+		return $this->splitat;
+	}
+
+	
 	public function setId($v)
 	{
 
@@ -86,6 +97,16 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 
 	} 
 	
+	public function setSplitat($v)
+	{
+
+		if ($this->splitat !== $v) {
+			$this->splitat = $v;
+			$this->modifiedColumns[] = EventPeer::SPLITAT;
+		}
+
+	} 
+	
 	public function hydrate(ResultSet $rs, $startcol = 1)
 	{
 		try {
@@ -96,11 +117,13 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 
 			$this->distance = $rs->getInt($startcol + 2);
 
+			$this->splitat = $rs->getInt($startcol + 3);
+
 			$this->resetModified();
 
 			$this->setNew(false);
 
-						return $startcol + 3; 
+						return $startcol + 4; 
 		} catch (Exception $e) {
 			throw new PropelException("Error populating Event object", $e);
 		}
@@ -252,6 +275,9 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 			case 2:
 				return $this->getDistance();
 				break;
+			case 3:
+				return $this->getSplitat();
+				break;
 			default:
 				return null;
 				break;
@@ -265,6 +291,7 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 			$keys[0] => $this->getId(),
 			$keys[1] => $this->getName(),
 			$keys[2] => $this->getDistance(),
+			$keys[3] => $this->getSplitat(),
 		);
 		return $result;
 	}
@@ -289,6 +316,9 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 			case 2:
 				$this->setDistance($value);
 				break;
+			case 3:
+				$this->setSplitat($value);
+				break;
 		} 	}
 
 	
@@ -299,6 +329,7 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 		if (array_key_exists($keys[0], $arr)) $this->setId($arr[$keys[0]]);
 		if (array_key_exists($keys[1], $arr)) $this->setName($arr[$keys[1]]);
 		if (array_key_exists($keys[2], $arr)) $this->setDistance($arr[$keys[2]]);
+		if (array_key_exists($keys[3], $arr)) $this->setSplitat($arr[$keys[3]]);
 	}
 
 	
@@ -309,6 +340,7 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 		if ($this->isColumnModified(EventPeer::ID)) $criteria->add(EventPeer::ID, $this->id);
 		if ($this->isColumnModified(EventPeer::NAME)) $criteria->add(EventPeer::NAME, $this->name);
 		if ($this->isColumnModified(EventPeer::DISTANCE)) $criteria->add(EventPeer::DISTANCE, $this->distance);
+		if ($this->isColumnModified(EventPeer::SPLITAT)) $criteria->add(EventPeer::SPLITAT, $this->splitat);
 
 		return $criteria;
 	}
@@ -342,6 +374,8 @@ abstract class BaseEvent extends BaseObject  implements Persistent {
 		$copyObj->setName($this->name);
 
 		$copyObj->setDistance($this->distance);
+
+		$copyObj->setSplitat($this->splitat);
 
 
 		if ($deepCopy) {

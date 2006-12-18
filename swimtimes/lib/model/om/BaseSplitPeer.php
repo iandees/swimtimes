@@ -29,7 +29,7 @@ abstract class BaseSplitPeer {
 	const NUMBER = 'sw_split.NUMBER';
 
 	
-	const TIME = 'sw_split.TIME';
+	const DURATION = 'sw_split.DURATION';
 
 	
 	private static $phpNameMap = null;
@@ -37,17 +37,17 @@ abstract class BaseSplitPeer {
 
 	
 	private static $fieldNames = array (
-		BasePeer::TYPE_PHPNAME => array ('Id', 'TimeId', 'Number', 'Time', ),
-		BasePeer::TYPE_COLNAME => array (SplitPeer::ID, SplitPeer::TIME_ID, SplitPeer::NUMBER, SplitPeer::TIME, ),
-		BasePeer::TYPE_FIELDNAME => array ('id', 'time_id', 'number', 'time', ),
+		BasePeer::TYPE_PHPNAME => array ('Id', 'TimeId', 'Number', 'Duration', ),
+		BasePeer::TYPE_COLNAME => array (SplitPeer::ID, SplitPeer::TIME_ID, SplitPeer::NUMBER, SplitPeer::DURATION, ),
+		BasePeer::TYPE_FIELDNAME => array ('id', 'time_id', 'number', 'duration', ),
 		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
 	);
 
 	
 	private static $fieldKeys = array (
-		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'TimeId' => 1, 'Number' => 2, 'Time' => 3, ),
-		BasePeer::TYPE_COLNAME => array (SplitPeer::ID => 0, SplitPeer::TIME_ID => 1, SplitPeer::NUMBER => 2, SplitPeer::TIME => 3, ),
-		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'time_id' => 1, 'number' => 2, 'time' => 3, ),
+		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'TimeId' => 1, 'Number' => 2, 'Duration' => 3, ),
+		BasePeer::TYPE_COLNAME => array (SplitPeer::ID => 0, SplitPeer::TIME_ID => 1, SplitPeer::NUMBER => 2, SplitPeer::DURATION => 3, ),
+		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'time_id' => 1, 'number' => 2, 'duration' => 3, ),
 		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
 	);
 
@@ -108,7 +108,7 @@ abstract class BaseSplitPeer {
 
 		$criteria->addSelectColumn(SplitPeer::NUMBER);
 
-		$criteria->addSelectColumn(SplitPeer::TIME);
+		$criteria->addSelectColumn(SplitPeer::DURATION);
 
 	}
 

@@ -27,6 +27,12 @@ abstract class BasePool extends BaseObject  implements Persistent {
 	protected $lng;
 
 	
+	protected $collMeets;
+
+	
+	protected $lastMeetCriteria = null;
+
+	
 	protected $alreadyInSave = false;
 
 	
@@ -185,6 +191,14 @@ abstract class BasePool extends BaseObject  implements Persistent {
 				}
 				$this->resetModified(); 			}
 
+			if ($this->collMeets !== null) {
+				foreach($this->collMeets as $referrerFK) {
+					if (!$referrerFK->isDeleted()) {
+						$affectedRows += $referrerFK->save($con);
+					}
+				}
+			}
+
 			$this->alreadyInSave = false;
 		}
 		return $affectedRows;
@@ -225,6 +239,14 @@ abstract class BasePool extends BaseObject  implements Persistent {
 				$failureMap = array_merge($failureMap, $retval);
 			}
 
+
+				if ($this->collMeets !== null) {
+					foreach($this->collMeets as $referrerFK) {
+						if (!$referrerFK->validate($columns)) {
+							$failureMap = array_merge($failureMap, $referrerFK->getValidationFailures());
+						}
+					}
+				}
 
 
 			$this->alreadyInValidation = false;
@@ -356,6 +378,15 @@ abstract class BasePool extends BaseObject  implements Persistent {
 		$copyObj->setLng($this->lng);
 
 
+		if ($deepCopy) {
+									$copyObj->setNew(false);
+
+			foreach($this->getMeets() as $relObj) {
+				$copyObj->addMeet($relObj->copy($deepCopy));
+			}
+
+		} 
+
 		$copyObj->setNew(true);
 
 		$copyObj->setId(NULL); 
@@ -377,6 +408,76 @@ abstract class BasePool extends BaseObject  implements Persistent {
 			self::$peer = new PoolPeer();
 		}
 		return self::$peer;
+	}
+
+	
+	public function initMeets()
+	{
+		if ($this->collMeets === null) {
+			$this->collMeets = array();
+		}
+	}
+
+	
+	public function getMeets($criteria = null, $con = null)
+	{
+				include_once 'lib/model/om/BaseMeetPeer.php';
+		if ($criteria === null) {
+			$criteria = new Criteria();
+		}
+		elseif ($criteria instanceof Criteria)
+		{
+			$criteria = clone $criteria;
+		}
+
+		if ($this->collMeets === null) {
+			if ($this->isNew()) {
+			   $this->collMeets = array();
+			} else {
+
+				$criteria->add(MeetPeer::POOL_ID, $this->getId());
+
+				MeetPeer::addSelectColumns($criteria);
+				$this->collMeets = MeetPeer::doSelect($criteria, $con);
+			}
+		} else {
+						if (!$this->isNew()) {
+												
+
+				$criteria->add(MeetPeer::POOL_ID, $this->getId());
+
+				MeetPeer::addSelectColumns($criteria);
+				if (!isset($this->lastMeetCriteria) || !$this->lastMeetCriteria->equals($criteria)) {
+					$this->collMeets = MeetPeer::doSelect($criteria, $con);
+				}
+			}
+		}
+		$this->lastMeetCriteria = $criteria;
+		return $this->collMeets;
+	}
+
+	
+	public function countMeets($criteria = null, $distinct = false, $con = null)
+	{
+				include_once 'lib/model/om/BaseMeetPeer.php';
+		if ($criteria === null) {
+			$criteria = new Criteria();
+		}
+		elseif ($criteria instanceof Criteria)
+		{
+			$criteria = clone $criteria;
+		}
+
+		$criteria->add(MeetPeer::POOL_ID, $this->getId());
+
+		return MeetPeer::doCount($criteria, $distinct, $con);
+	}
+
+	
+	public function addMeet(Meet $l)
+	{
+		$this->collMeets[] = $l;
+		$l->setPool($this);
 	}
 
 } 

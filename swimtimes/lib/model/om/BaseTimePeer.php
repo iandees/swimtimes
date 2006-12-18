@@ -13,7 +13,7 @@ abstract class BaseTimePeer {
 	const CLASS_DEFAULT = 'lib.model.Time';
 
 	
-	const NUM_COLUMNS = 7;
+	const NUM_COLUMNS = 8;
 
 	
 	const NUM_LAZY_LOAD_COLUMNS = 0;
@@ -38,6 +38,9 @@ abstract class BaseTimePeer {
 	const PLACE = 'sw_time.PLACE';
 
 	
+	const POINTS = 'sw_time.POINTS';
+
+	
 	const LANE = 'sw_time.LANE';
 
 	
@@ -46,18 +49,18 @@ abstract class BaseTimePeer {
 
 	
 	private static $fieldNames = array (
-		BasePeer::TYPE_PHPNAME => array ('Id', 'SwimmerId', 'MeetId', 'EventId', 'Time', 'Place', 'Lane', ),
-		BasePeer::TYPE_COLNAME => array (TimePeer::ID, TimePeer::SWIMMER_ID, TimePeer::MEET_ID, TimePeer::EVENT_ID, TimePeer::TIME, TimePeer::PLACE, TimePeer::LANE, ),
-		BasePeer::TYPE_FIELDNAME => array ('id', 'swimmer_id', 'meet_id', 'event_id', 'time', 'place', 'lane', ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, )
+		BasePeer::TYPE_PHPNAME => array ('Id', 'SwimmerId', 'MeetId', 'EventId', 'Time', 'Place', 'Points', 'Lane', ),
+		BasePeer::TYPE_COLNAME => array (TimePeer::ID, TimePeer::SWIMMER_ID, TimePeer::MEET_ID, TimePeer::EVENT_ID, TimePeer::TIME, TimePeer::PLACE, TimePeer::POINTS, TimePeer::LANE, ),
+		BasePeer::TYPE_FIELDNAME => array ('id', 'swimmer_id', 'meet_id', 'event_id', 'time', 'place', 'points', 'lane', ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, 7, )
 	);
 
 	
 	private static $fieldKeys = array (
-		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'SwimmerId' => 1, 'MeetId' => 2, 'EventId' => 3, 'Time' => 4, 'Place' => 5, 'Lane' => 6, ),
-		BasePeer::TYPE_COLNAME => array (TimePeer::ID => 0, TimePeer::SWIMMER_ID => 1, TimePeer::MEET_ID => 2, TimePeer::EVENT_ID => 3, TimePeer::TIME => 4, TimePeer::PLACE => 5, TimePeer::LANE => 6, ),
-		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'swimmer_id' => 1, 'meet_id' => 2, 'event_id' => 3, 'time' => 4, 'place' => 5, 'lane' => 6, ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, )
+		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'SwimmerId' => 1, 'MeetId' => 2, 'EventId' => 3, 'Time' => 4, 'Place' => 5, 'Points' => 6, 'Lane' => 7, ),
+		BasePeer::TYPE_COLNAME => array (TimePeer::ID => 0, TimePeer::SWIMMER_ID => 1, TimePeer::MEET_ID => 2, TimePeer::EVENT_ID => 3, TimePeer::TIME => 4, TimePeer::PLACE => 5, TimePeer::POINTS => 6, TimePeer::LANE => 7, ),
+		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'swimmer_id' => 1, 'meet_id' => 2, 'event_id' => 3, 'time' => 4, 'place' => 5, 'points' => 6, 'lane' => 7, ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, 7, )
 	);
 
 	
@@ -122,6 +125,8 @@ abstract class BaseTimePeer {
 		$criteria->addSelectColumn(TimePeer::TIME);
 
 		$criteria->addSelectColumn(TimePeer::PLACE);
+
+		$criteria->addSelectColumn(TimePeer::POINTS);
 
 		$criteria->addSelectColumn(TimePeer::LANE);
 

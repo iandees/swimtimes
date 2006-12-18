@@ -44,6 +44,8 @@ class TimeMapBuilder {
 
 		$tMap->addColumn('PLACE', 'Place', 'int', CreoleTypes::INTEGER, false);
 
+		$tMap->addColumn('POINTS', 'Points', 'int', CreoleTypes::INTEGER, false);
+
 		$tMap->addColumn('LANE', 'Lane', 'int', CreoleTypes::INTEGER, false);
 				
     } 

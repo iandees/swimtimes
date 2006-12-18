@@ -13,7 +13,7 @@ abstract class BaseMeetPeer {
 	const CLASS_DEFAULT = 'lib.model.Meet';
 
 	
-	const NUM_COLUMNS = 4;
+	const NUM_COLUMNS = 5;
 
 	
 	const NUM_LAZY_LOAD_COLUMNS = 0;
@@ -32,23 +32,26 @@ abstract class BaseMeetPeer {
 	const ENDDATE = 'sw_meet.ENDDATE';
 
 	
+	const POOL_ID = 'sw_meet.POOL_ID';
+
+	
 	private static $phpNameMap = null;
 
 
 	
 	private static $fieldNames = array (
-		BasePeer::TYPE_PHPNAME => array ('Id', 'Name', 'Startdate', 'Enddate', ),
-		BasePeer::TYPE_COLNAME => array (MeetPeer::ID, MeetPeer::NAME, MeetPeer::STARTDATE, MeetPeer::ENDDATE, ),
-		BasePeer::TYPE_FIELDNAME => array ('id', 'name', 'startdate', 'enddate', ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
+		BasePeer::TYPE_PHPNAME => array ('Id', 'Name', 'Startdate', 'Enddate', 'PoolId', ),
+		BasePeer::TYPE_COLNAME => array (MeetPeer::ID, MeetPeer::NAME, MeetPeer::STARTDATE, MeetPeer::ENDDATE, MeetPeer::POOL_ID, ),
+		BasePeer::TYPE_FIELDNAME => array ('id', 'name', 'startdate', 'enddate', 'pool_id', ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, )
 	);
 
 	
 	private static $fieldKeys = array (
-		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'Name' => 1, 'Startdate' => 2, 'Enddate' => 3, ),
-		BasePeer::TYPE_COLNAME => array (MeetPeer::ID => 0, MeetPeer::NAME => 1, MeetPeer::STARTDATE => 2, MeetPeer::ENDDATE => 3, ),
-		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'name' => 1, 'startdate' => 2, 'enddate' => 3, ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
+		BasePeer::TYPE_PHPNAME => array ('Id' => 0, 'Name' => 1, 'Startdate' => 2, 'Enddate' => 3, 'PoolId' => 4, ),
+		BasePeer::TYPE_COLNAME => array (MeetPeer::ID => 0, MeetPeer::NAME => 1, MeetPeer::STARTDATE => 2, MeetPeer::ENDDATE => 3, MeetPeer::POOL_ID => 4, ),
+		BasePeer::TYPE_FIELDNAME => array ('id' => 0, 'name' => 1, 'startdate' => 2, 'enddate' => 3, 'pool_id' => 4, ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, )
 	);
 
 	
@@ -109,6 +112,8 @@ abstract class BaseMeetPeer {
 		$criteria->addSelectColumn(MeetPeer::STARTDATE);
 
 		$criteria->addSelectColumn(MeetPeer::ENDDATE);
+
+		$criteria->addSelectColumn(MeetPeer::POOL_ID);
 
 	}
 
@@ -187,6 +192,167 @@ abstract class BaseMeetPeer {
 		}
 		return $results;
 	}
+
+	
+	public static function doCountJoinPool(Criteria $criteria, $distinct = false, $con = null)
+	{
+				$criteria = clone $criteria;
+		
+				$criteria->clearSelectColumns()->clearOrderByColumns();
+		if ($distinct || in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
+			$criteria->addSelectColumn(MeetPeer::COUNT_DISTINCT);
+		} else {
+			$criteria->addSelectColumn(MeetPeer::COUNT);
+		}
+		
+				foreach($criteria->getGroupByColumns() as $column)
+		{
+			$criteria->addSelectColumn($column);
+		}
+
+		$criteria->addJoin(MeetPeer::POOL_ID, PoolPeer::ID);
+
+		$rs = MeetPeer::doSelectRS($criteria, $con);
+		if ($rs->next()) {
+			return $rs->getInt(1);
+		} else {
+						return 0;
+		}
+	}
+
+
+	
+	public static function doSelectJoinPool(Criteria $c, $con = null)
+	{
+		$c = clone $c;
+
+				if ($c->getDbName() == Propel::getDefaultDB()) {
+			$c->setDbName(self::DATABASE_NAME);
+		}
+
+		MeetPeer::addSelectColumns($c);
+		$startcol = (MeetPeer::NUM_COLUMNS - MeetPeer::NUM_LAZY_LOAD_COLUMNS) + 1;
+		PoolPeer::addSelectColumns($c);
+
+		$c->addJoin(MeetPeer::POOL_ID, PoolPeer::ID);
+		$rs = BasePeer::doSelect($c, $con);
+		$results = array();
+
+		while($rs->next()) {
+
+			$omClass = MeetPeer::getOMClass();
+
+			$cls = Propel::import($omClass);
+			$obj1 = new $cls();
+			$obj1->hydrate($rs);
+
+			$omClass = PoolPeer::getOMClass();
+
+			$cls = Propel::import($omClass);
+			$obj2 = new $cls();
+			$obj2->hydrate($rs, $startcol);
+
+			$newObject = true;
+			foreach($results as $temp_obj1) {
+				$temp_obj2 = $temp_obj1->getPool(); 				if ($temp_obj2->getPrimaryKey() === $obj2->getPrimaryKey()) {
+					$newObject = false;
+										$temp_obj2->addMeet($obj1); 					break;
+				}
+			}
+			if ($newObject) {
+				$obj2->initMeets();
+				$obj2->addMeet($obj1); 			}
+			$results[] = $obj1;
+		}
+		return $results;
+	}
+
+
+	
+	public static function doCountJoinAll(Criteria $criteria, $distinct = false, $con = null)
+	{
+		$criteria = clone $criteria;
+
+				$criteria->clearSelectColumns()->clearOrderByColumns();
+		if ($distinct || in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
+			$criteria->addSelectColumn(MeetPeer::COUNT_DISTINCT);
+		} else {
+			$criteria->addSelectColumn(MeetPeer::COUNT);
+		}
+		
+				foreach($criteria->getGroupByColumns() as $column)
+		{
+			$criteria->addSelectColumn($column);
+		}
+
+		$criteria->addJoin(MeetPeer::POOL_ID, PoolPeer::ID);
+
+		$rs = MeetPeer::doSelectRS($criteria, $con);
+		if ($rs->next()) {
+			return $rs->getInt(1);
+		} else {
+						return 0;
+		}
+	}
+
+
+	
+	public static function doSelectJoinAll(Criteria $c, $con = null)
+	{
+		$c = clone $c;
+
+				if ($c->getDbName() == Propel::getDefaultDB()) {
+			$c->setDbName(self::DATABASE_NAME);
+		}
+
+		MeetPeer::addSelectColumns($c);
+		$startcol2 = (MeetPeer::NUM_COLUMNS - MeetPeer::NUM_LAZY_LOAD_COLUMNS) + 1;
+
+		PoolPeer::addSelectColumns($c);
+		$startcol3 = $startcol2 + PoolPeer::NUM_COLUMNS;
+
+		$c->addJoin(MeetPeer::POOL_ID, PoolPeer::ID);
+
+		$rs = BasePeer::doSelect($c, $con);
+		$results = array();
+		
+		while($rs->next()) {
+
+			$omClass = MeetPeer::getOMClass();
+
+			
+			$cls = Propel::import($omClass);
+			$obj1 = new $cls();
+			$obj1->hydrate($rs);
+
+				
+					
+			$omClass = PoolPeer::getOMClass();
+
+	
+			$cls = Propel::import($omClass);
+			$obj2 = new $cls();
+			$obj2->hydrate($rs, $startcol2);
+			
+			$newObject = true;
+			for ($j=0, $resCount=count($results); $j < $resCount; $j++) {
+				$temp_obj1 = $results[$j];
+				$temp_obj2 = $temp_obj1->getPool(); 				if ($temp_obj2->getPrimaryKey() === $obj2->getPrimaryKey()) {
+					$newObject = false;
+					$temp_obj2->addMeet($obj1); 					break;
+				}
+			}
+			
+			if ($newObject) {
+				$obj2->initMeets();
+				$obj2->addMeet($obj1);
+			}
+
+			$results[] = $obj1;
+		}
+		return $results;
+	}
+
 	
 	public static function getTableMap()
 	{
