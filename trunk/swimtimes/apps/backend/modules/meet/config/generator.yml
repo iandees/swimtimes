@@ -1,0 +1,28 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Meet
+    theme:            default
+    fields:
+      name: { name: Name }
+      startdate: { name: Start Date }
+      enddate: { name: End Date }
+      pool_id: { name: Pool }
+    list:
+      title: Meets List
+      layout: tabular
+      display: [ =name, startdate, enddate, pool, numTimes ]
+      fields:
+        numTimes: { name: '# Times' }
+        startdate: { params: date_format='MM/dd/yyyy' }
+        enddate: { params: date_format='MM/dd/yyyy' }
+      object_actions:
+        _edit: ~
+        _delete: ~
+      max_per_page: 25
+      filters: [ pool_id ]
+    edit:
+      title: Time detail
+      display:
+        "Details": [ name, startdate, enddate, pool_id ]
+        #"Events": [ _events ]

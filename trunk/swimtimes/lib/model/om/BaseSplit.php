@@ -24,7 +24,7 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 
 
 	
-	protected $time;
+	protected $duration;
 
 	
 	protected $aTime;
@@ -57,10 +57,10 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 	}
 
 	
-	public function getTime()
+	public function getDuration()
 	{
 
-		return $this->time;
+		return $this->duration;
 	}
 
 	
@@ -98,12 +98,12 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 
 	} 
 	
-	public function setTime($v)
+	public function setDuration($v)
 	{
 
-		if ($this->time !== $v) {
-			$this->time = $v;
-			$this->modifiedColumns[] = SplitPeer::TIME;
+		if ($this->duration !== $v) {
+			$this->duration = $v;
+			$this->modifiedColumns[] = SplitPeer::DURATION;
 		}
 
 	} 
@@ -118,7 +118,7 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 
 			$this->number = $rs->getInt($startcol + 2);
 
-			$this->time = $rs->getFloat($startcol + 3);
+			$this->duration = $rs->getFloat($startcol + 3);
 
 			$this->resetModified();
 
@@ -278,7 +278,7 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 				return $this->getNumber();
 				break;
 			case 3:
-				return $this->getTime();
+				return $this->getDuration();
 				break;
 			default:
 				return null;
@@ -293,7 +293,7 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 			$keys[0] => $this->getId(),
 			$keys[1] => $this->getTimeId(),
 			$keys[2] => $this->getNumber(),
-			$keys[3] => $this->getTime(),
+			$keys[3] => $this->getDuration(),
 		);
 		return $result;
 	}
@@ -319,7 +319,7 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 				$this->setNumber($value);
 				break;
 			case 3:
-				$this->setTime($value);
+				$this->setDuration($value);
 				break;
 		} 	}
 
@@ -331,7 +331,7 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 		if (array_key_exists($keys[0], $arr)) $this->setId($arr[$keys[0]]);
 		if (array_key_exists($keys[1], $arr)) $this->setTimeId($arr[$keys[1]]);
 		if (array_key_exists($keys[2], $arr)) $this->setNumber($arr[$keys[2]]);
-		if (array_key_exists($keys[3], $arr)) $this->setTime($arr[$keys[3]]);
+		if (array_key_exists($keys[3], $arr)) $this->setDuration($arr[$keys[3]]);
 	}
 
 	
@@ -342,7 +342,7 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 		if ($this->isColumnModified(SplitPeer::ID)) $criteria->add(SplitPeer::ID, $this->id);
 		if ($this->isColumnModified(SplitPeer::TIME_ID)) $criteria->add(SplitPeer::TIME_ID, $this->time_id);
 		if ($this->isColumnModified(SplitPeer::NUMBER)) $criteria->add(SplitPeer::NUMBER, $this->number);
-		if ($this->isColumnModified(SplitPeer::TIME)) $criteria->add(SplitPeer::TIME, $this->time);
+		if ($this->isColumnModified(SplitPeer::DURATION)) $criteria->add(SplitPeer::DURATION, $this->duration);
 
 		return $criteria;
 	}
@@ -377,7 +377,7 @@ abstract class BaseSplit extends BaseObject  implements Persistent {
 
 		$copyObj->setNumber($this->number);
 
-		$copyObj->setTime($this->time);
+		$copyObj->setDuration($this->duration);
 
 
 		$copyObj->setNew(true);

@@ -1,0 +1,14 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class: Swimmer
+    theme: default
+    fields:
+      name: { name: Swimmer Name }
+      year: { name: Year }
+      team: { name: Team }
+    list:
+      title: List of Swimmers
+      layout: tabular
+      display: [=name, year, team]
+

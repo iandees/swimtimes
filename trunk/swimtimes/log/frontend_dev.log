@@ -2034,3 +2034,591 @@ Dec 16 12:48:41 symfony [info] {sfTimerManager} Configuration 14.09 ms (12)
 Dec 16 12:48:41 symfony [info] {sfTimerManager} Action "swimmer/list" 177.62 ms (1)
 Dec 16 12:48:41 symfony [info] {sfTimerManager} Database 5.88 ms (1)
 Dec 16 12:48:41 symfony [info] {sfTimerManager} View "Success" for "swimmer/list" 28.80 ms (1)
+Dec 17 13:56:26 symfony [info] {sfRouting} connect "/"
+Dec 17 13:56:26 symfony [info] {sfRouting} connect "/symfony/:action/*"
+Dec 17 13:56:26 symfony [info] {sfRouting} connect "/:module"
+Dec 17 13:56:26 symfony [info] {sfRouting} connect "/:module/:action/*"
+Dec 17 13:56:26 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_event
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_event
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_swimmer
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_swimmer
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_pool
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_pool
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_team
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_team
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - Blue','MBlue')
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - Blue','GBlue')
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - K','MK')
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - K','GK')
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - SK','MSK')
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - SK','GSK')
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES (?,?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES ('Nicolet High School Pool',0,0)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES (?,?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES ('Homestead High School Pool',0,0)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES (?,?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES ('Ian Dees',2002,1)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('Diving',0)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Medley Relay',200)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Free',200)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard IM',200)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('50 Yard Free',50)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Fly',100)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Free',100)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('500 Yard Free',500)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Free Relay',200)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Back',100)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Breaststroke',100)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} beginning transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 13:56:26 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('400 Yard Free Relay',400)
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 13:56:26 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfRouting} connect "/"
+Dec 17 14:24:41 symfony [info] {sfRouting} connect "/symfony/:action/*"
+Dec 17 14:24:41 symfony [info] {sfRouting} connect "/:module"
+Dec 17 14:24:41 symfony [info] {sfRouting} connect "/:module/:action/*"
+Dec 17 14:24:41 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_event
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_event
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_swimmer
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_swimmer
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_pool
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_pool
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_team
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_team
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - Blue','MBlue')
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - Blue','GBlue')
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - K','MK')
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - K','GK')
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - SK','MSK')
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - SK','GSK')
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES (?,?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES ('Nicolet High School Pool',0,0)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES (?,?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES ('Homestead High School Pool',0,0)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES (?,?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES ('Ian Dees',2002,1)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('Diving',0)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Medley Relay',200)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Free',200)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard IM',200)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('50 Yard Free',50)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Fly',100)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Free',100)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('500 Yard Free',500)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Free Relay',200)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Back',100)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Breaststroke',100)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} beginning transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 14:24:41 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('400 Yard Free Relay',400)
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 14:24:41 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_event
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_event
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_swimmer
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_swimmer
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_pool
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_pool
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_team
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_team
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - Blue','MBlue')
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - Blue','GBlue')
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - K','MK')
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - K','GK')
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - SK','MSK')
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - SK','GSK')
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES (?,?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES ('Nicolet High School Pool',0,0)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES (?,?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES ('Homestead High School Pool',0,0)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES (?,?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES ('Ian Dees',2002,1)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('Diving',0)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Medley Relay',200)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Free',200)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard IM',200)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('50 Yard Free',50)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Fly',100)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Free',100)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('500 Yard Free',500)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('200 Yard Free Relay',200)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Back',100)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('100 Yard Breaststroke',100)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE) VALUES (?,?)
+Dec 17 15:57:18 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE) VALUES ('400 Yard Free Relay',400)
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:57:18 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} connect(): DSN: array (   'database' => '../data/sandbox.db',   'encoding' => NULL,   'hostspec' => '.',   'password' => NULL,   'persistent' => NULL,   'phptype' => 'sqlite',   'port' => NULL,   'username' => NULL, ), FLAGS: 0
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_event
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_event
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_swimmer
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_swimmer
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_pool
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_pool
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): DELETE FROM sw_team
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): DELETE FROM sw_team
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - Blue','MBlue')
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - Blue','GBlue')
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - K','MK')
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - K','GK')
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Boys - SK','MSK')
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES (?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_team (NAME,SHORTNAME) VALUES ('Girls - SK','GSK')
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES ('Nicolet High School Pool',0,0)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_pool (NAME,LAT,LNG) VALUES ('Homestead High School Pool',0,0)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_swimmer (NAME,YEAR,TEAM_ID) VALUES ('Ian Dees',2002,1)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('Diving',0,1)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('200 Yard Medley Relay',200,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('200 Yard Free',200,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('200 Yard IM',200,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('50 Yard Free',50,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('100 Yard Fly',100,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('100 Yard Free',100,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('500 Yard Free',500,100)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('200 Yard Free Relay',200,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('100 Yard Back',100,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('100 Yard Breaststroke',100,50)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} beginning transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} prepareStatement(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES (?,?,?)
+Dec 17 15:59:07 symfony [info] {sfCreole} executeUpdate(): INSERT INTO sw_event (NAME,DISTANCE,SPLITAT) VALUES ('400 Yard Free Relay',400,100)
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.
+Dec 17 15:59:07 symfony [info] {sfCreole} committing transaction.

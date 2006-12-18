@@ -39,6 +39,8 @@ class MeetMapBuilder {
 		$tMap->addColumn('STARTDATE', 'Startdate', 'int', CreoleTypes::TIMESTAMP, false);
 
 		$tMap->addColumn('ENDDATE', 'Enddate', 'int', CreoleTypes::TIMESTAMP, false);
+
+		$tMap->addForeignKey('POOL_ID', 'PoolId', 'int', CreoleTypes::INTEGER, 'sw_pool', 'ID', false, null);
 				
     } 
 } 

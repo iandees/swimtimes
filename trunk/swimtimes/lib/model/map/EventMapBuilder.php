@@ -37,6 +37,8 @@ class EventMapBuilder {
 		$tMap->addColumn('NAME', 'Name', 'string', CreoleTypes::VARCHAR, false);
 
 		$tMap->addColumn('DISTANCE', 'Distance', 'int', CreoleTypes::INTEGER, false);
+
+		$tMap->addColumn('SPLITAT', 'Splitat', 'int', CreoleTypes::INTEGER, false);
 				
     } 
 } 

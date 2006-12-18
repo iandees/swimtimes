@@ -1,0 +1,19 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Pool
+    theme:            default
+    fields:
+      name: { name: Pool Name }
+    list:
+      title: Pool List
+      layout: tabular
+      display: [ =name ]
+      object_actions:
+        _edit: ~
+        _delete: ~
+      max_per_page: 20
+    edit:
+      title: Pool Detail
+      fields:
+        name: { type: input_tag, params: size=40 }

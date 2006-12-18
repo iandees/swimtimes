@@ -11,6 +11,7 @@ propel:
     name: varchar(255)
     startdate: timestamp
     enddate: timestamp
+    pool_id:
   sw_time:
     _attributes: { phpName: Time }
     id:
@@ -19,13 +20,14 @@ propel:
     event_id:
     time: double
     place: integer
+    points: integer
     lane: integer
   sw_split:
     _attributes: { phpName: Split }
     id:
     time_id:
     number: integer
-    time: double
+    duration: double
   sw_pool:
     _attributes: { phpName: Pool }
     id:
@@ -42,3 +44,4 @@ propel:
     id:
     name: varchar(255)
     distance: integer
+    splitAt: integer

@@ -12,4 +12,8 @@ class Event extends BaseEvent
   public function __toString() {
     return $this->getName();
   }
+
+  public function getNumSplits() {
+    return $this->getDistance() / $this->getSplitAt();
+  }
 }

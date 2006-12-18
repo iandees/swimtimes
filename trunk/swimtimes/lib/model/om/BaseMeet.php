@@ -26,6 +26,13 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 	
 	protected $enddate;
 
+
+	
+	protected $pool_id;
+
+	
+	protected $aPool;
+
 	
 	protected $collTimes;
 
@@ -97,6 +104,13 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 	}
 
 	
+	public function getPoolId()
+	{
+
+		return $this->pool_id;
+	}
+
+	
 	public function setId($v)
 	{
 
@@ -151,6 +165,20 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 
 	} 
 	
+	public function setPoolId($v)
+	{
+
+		if ($this->pool_id !== $v) {
+			$this->pool_id = $v;
+			$this->modifiedColumns[] = MeetPeer::POOL_ID;
+		}
+
+		if ($this->aPool !== null && $this->aPool->getId() !== $v) {
+			$this->aPool = null;
+		}
+
+	} 
+	
 	public function hydrate(ResultSet $rs, $startcol = 1)
 	{
 		try {
@@ -163,11 +191,13 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 
 			$this->enddate = $rs->getTimestamp($startcol + 3, null);
 
+			$this->pool_id = $rs->getInt($startcol + 4);
+
 			$this->resetModified();
 
 			$this->setNew(false);
 
-						return $startcol + 4; 
+						return $startcol + 5; 
 		} catch (Exception $e) {
 			throw new PropelException("Error populating Meet object", $e);
 		}
@@ -222,6 +252,15 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 	{
 		$affectedRows = 0; 		if (!$this->alreadyInSave) {
 			$this->alreadyInSave = true;
+
+
+												
+			if ($this->aPool !== null) {
+				if ($this->aPool->isModified()) {
+					$affectedRows += $this->aPool->save($con);
+				}
+				$this->setPool($this->aPool);
+			}
 
 
 						if ($this->isModified()) {
@@ -279,6 +318,14 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 			$failureMap = array();
 
 
+												
+			if ($this->aPool !== null) {
+				if (!$this->aPool->validate($columns)) {
+					$failureMap = array_merge($failureMap, $this->aPool->getValidationFailures());
+				}
+			}
+
+
 			if (($retval = MeetPeer::doValidate($this, $columns)) !== true) {
 				$failureMap = array_merge($failureMap, $retval);
 			}
@@ -322,6 +369,9 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 			case 3:
 				return $this->getEnddate();
 				break;
+			case 4:
+				return $this->getPoolId();
+				break;
 			default:
 				return null;
 				break;
@@ -336,6 +386,7 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 			$keys[1] => $this->getName(),
 			$keys[2] => $this->getStartdate(),
 			$keys[3] => $this->getEnddate(),
+			$keys[4] => $this->getPoolId(),
 		);
 		return $result;
 	}
@@ -363,6 +414,9 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 			case 3:
 				$this->setEnddate($value);
 				break;
+			case 4:
+				$this->setPoolId($value);
+				break;
 		} 	}
 
 	
@@ -374,6 +428,7 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 		if (array_key_exists($keys[1], $arr)) $this->setName($arr[$keys[1]]);
 		if (array_key_exists($keys[2], $arr)) $this->setStartdate($arr[$keys[2]]);
 		if (array_key_exists($keys[3], $arr)) $this->setEnddate($arr[$keys[3]]);
+		if (array_key_exists($keys[4], $arr)) $this->setPoolId($arr[$keys[4]]);
 	}
 
 	
@@ -385,6 +440,7 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 		if ($this->isColumnModified(MeetPeer::NAME)) $criteria->add(MeetPeer::NAME, $this->name);
 		if ($this->isColumnModified(MeetPeer::STARTDATE)) $criteria->add(MeetPeer::STARTDATE, $this->startdate);
 		if ($this->isColumnModified(MeetPeer::ENDDATE)) $criteria->add(MeetPeer::ENDDATE, $this->enddate);
+		if ($this->isColumnModified(MeetPeer::POOL_ID)) $criteria->add(MeetPeer::POOL_ID, $this->pool_id);
 
 		return $criteria;
 	}
@@ -421,6 +477,8 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 
 		$copyObj->setEnddate($this->enddate);
 
+		$copyObj->setPoolId($this->pool_id);
+
 
 		if ($deepCopy) {
 									$copyObj->setNew(false);
@@ -452,6 +510,36 @@ abstract class BaseMeet extends BaseObject  implements Persistent {
 			self::$peer = new MeetPeer();
 		}
 		return self::$peer;
+	}
+
+	
+	public function setPool($v)
+	{
+
+
+		if ($v === null) {
+			$this->setPoolId(NULL);
+		} else {
+			$this->setPoolId($v->getId());
+		}
+
+
+		$this->aPool = $v;
+	}
+
+
+	
+	public function getPool($con = null)
+	{
+				include_once 'lib/model/om/BasePoolPeer.php';
+
+		if ($this->aPool === null && ($this->pool_id !== null)) {
+
+			$this->aPool = PoolPeer::retrieveByPK($this->pool_id, $con);
+
+			
+		}
+		return $this->aPool;
 	}
 
 	

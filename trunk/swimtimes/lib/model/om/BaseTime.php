@@ -36,6 +36,10 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 
 
 	
+	protected $points;
+
+
+	
 	protected $lane;
 
 	
@@ -99,6 +103,13 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 	{
 
 		return $this->place;
+	}
+
+	
+	public function getPoints()
+	{
+
+		return $this->points;
 	}
 
 	
@@ -181,6 +192,16 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 
 	} 
 	
+	public function setPoints($v)
+	{
+
+		if ($this->points !== $v) {
+			$this->points = $v;
+			$this->modifiedColumns[] = TimePeer::POINTS;
+		}
+
+	} 
+	
 	public function setLane($v)
 	{
 
@@ -207,13 +228,15 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 
 			$this->place = $rs->getInt($startcol + 5);
 
-			$this->lane = $rs->getInt($startcol + 6);
+			$this->points = $rs->getInt($startcol + 6);
+
+			$this->lane = $rs->getInt($startcol + 7);
 
 			$this->resetModified();
 
 			$this->setNew(false);
 
-						return $startcol + 7; 
+						return $startcol + 8; 
 		} catch (Exception $e) {
 			throw new PropelException("Error populating Time object", $e);
 		}
@@ -418,6 +441,9 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 				return $this->getPlace();
 				break;
 			case 6:
+				return $this->getPoints();
+				break;
+			case 7:
 				return $this->getLane();
 				break;
 			default:
@@ -436,7 +462,8 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 			$keys[3] => $this->getEventId(),
 			$keys[4] => $this->getTime(),
 			$keys[5] => $this->getPlace(),
-			$keys[6] => $this->getLane(),
+			$keys[6] => $this->getPoints(),
+			$keys[7] => $this->getLane(),
 		);
 		return $result;
 	}
@@ -471,6 +498,9 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 				$this->setPlace($value);
 				break;
 			case 6:
+				$this->setPoints($value);
+				break;
+			case 7:
 				$this->setLane($value);
 				break;
 		} 	}
@@ -486,7 +516,8 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 		if (array_key_exists($keys[3], $arr)) $this->setEventId($arr[$keys[3]]);
 		if (array_key_exists($keys[4], $arr)) $this->setTime($arr[$keys[4]]);
 		if (array_key_exists($keys[5], $arr)) $this->setPlace($arr[$keys[5]]);
-		if (array_key_exists($keys[6], $arr)) $this->setLane($arr[$keys[6]]);
+		if (array_key_exists($keys[6], $arr)) $this->setPoints($arr[$keys[6]]);
+		if (array_key_exists($keys[7], $arr)) $this->setLane($arr[$keys[7]]);
 	}
 
 	
@@ -500,6 +531,7 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 		if ($this->isColumnModified(TimePeer::EVENT_ID)) $criteria->add(TimePeer::EVENT_ID, $this->event_id);
 		if ($this->isColumnModified(TimePeer::TIME)) $criteria->add(TimePeer::TIME, $this->time);
 		if ($this->isColumnModified(TimePeer::PLACE)) $criteria->add(TimePeer::PLACE, $this->place);
+		if ($this->isColumnModified(TimePeer::POINTS)) $criteria->add(TimePeer::POINTS, $this->points);
 		if ($this->isColumnModified(TimePeer::LANE)) $criteria->add(TimePeer::LANE, $this->lane);
 
 		return $criteria;
@@ -540,6 +572,8 @@ abstract class BaseTime extends BaseObject  implements Persistent {
 		$copyObj->setTime($this->time);
 
 		$copyObj->setPlace($this->place);
+
+		$copyObj->setPoints($this->points);
 
 		$copyObj->setLane($this->lane);
 
