@@ -25,4 +25,4 @@ generator:
       title: Time detail
       display:
         "Details": [ name, startdate, enddate, pool_id ]
-        #"Events": [ _events ]
+        "Events": [ _ajax_events ]

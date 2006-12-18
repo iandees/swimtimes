@@ -3,3 +3,10 @@ generator:
   param:
     model_class:      Split
     theme:            default
+
+    fields:
+      duration: { name: Split Time }
+      number: { name: Split number }
+      lane: { name: Lane }
+      swimmer_id: { name: Swimmer }
+      
