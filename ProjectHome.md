@@ -1,0 +1,1 @@
+Using Symfony PHP, this project is aimed at creating a quick and dirty, searchable storage for swimmer times.
